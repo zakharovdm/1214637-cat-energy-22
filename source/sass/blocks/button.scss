@@ -8,13 +8,13 @@
   color: $white;
 
   background-color: $green;
-}
 
-.button:hover,
-.button:focus {
-  background-color: $dark-green;
-}
+  &:hover,
+  &:focus {
+    background-color: $dark-green;
+  }
 
-.button:active {
-  color: rgba($white, 0.3);
+  &:active {
+    color: rgba($white, 0.3);
+  }
 }

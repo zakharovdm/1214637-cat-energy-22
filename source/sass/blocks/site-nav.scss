@@ -14,13 +14,13 @@
   line-height: 20px;
   text-transform: uppercase;
   color: $black;
-}
 
-.site-nav__link:hover,
-.site-nav__link:focus {
-  color: rgba($black, 0.4);
-}
+  &:hover,
+  &:focus {
+    color: rgba($black, 0.4);
+  }
 
-.site-nav__link:active {
-  color: rgba($black, 0.1);
+  &:active {
+    color: rgba($black, 0.1);
+  }
 }
