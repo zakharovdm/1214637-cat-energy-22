@@ -1,0 +1,27 @@
+.promo__wrapper {
+  min-height: 302px;
+  max-width: 320px;
+
+  color: $white;
+  text-align: center;
+
+  background: url("../../img/green-layer.png"), url("../../img/background-promo-mobile.jpg") no-repeat;
+  background-color: $green;
+}
+
+.promo__title {
+  margin: 0;
+  padding: 23px 10px 29px;
+
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 36px;
+}
+
+.promo__slogan {
+  margin: 0;
+  padding: 0 10px;
+
+  line-height: 14px;
+  text-transform: uppercase;
+}

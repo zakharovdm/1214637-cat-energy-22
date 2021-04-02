@@ -1,0 +1,23 @@
+.site-nav__list {
+  @include reset-list;
+}
+
+.site-nav__link {
+  display: block;
+  padding: 22px 10px 24px;
+
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 20px;
+  text-transform: uppercase;
+  color: $black;
+
+  &:hover,
+  &:focus {
+    color: rgba($black, 0.4);
+  }
+
+  &:active {
+    color: rgba($black, 0.1);
+  }
+}
