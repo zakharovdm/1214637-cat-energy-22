@@ -29,3 +29,28 @@
   border: none;
   cursor: pointer;
 }
+
+.button--catalog {
+  padding: 10px 5px;
+
+  font-size: 16px;
+  line-height: 20px;
+
+  border: none;
+  cursor: pointer;
+}
+
+.button--show {
+  background-color: $grey;
+  color: $dark-grey;
+
+  &:hover,
+  &:focus {
+    background-color: $very-light-grey;
+  }
+
+  &:active {
+    background-color: $very-light-grey;
+    color: rgba($dark-grey, 0.3);
+  }
+}
