@@ -52,7 +52,7 @@
         </fieldset>
 
         <fieldset class="form__fields">
-          <legend>Контактные данные (владельца кота)</legend>
+          <legend class="form__title">Контактные данные (владельца кота)</legend>
           <label class="form__label" for="email-field">E-mail:*</label>
           <input class="form__input" type="email" name="email" id="email-field" placeholder="kuklachev@gmail.com">
           <label class="form__label" for="phone-field">Телефон:*</label>
@@ -60,20 +60,20 @@
         </fieldset>
 
         <fieldset class="form__fields">
-          <legend>Комментарий</legend>
+          <legend class="form__title">Комментарий</legend>
           <textarea class="form__input form__input--comment" name="user-comment" placeholder="Расскажите обо всех повАдках кота"></textarea>
         </fieldset>
 
         <fieldset class="form__fields">
-          <legend>Дополнительно</legend>
+          <legend class="form__title">Дополнительно</legend>
           <input class="form__checkbox" type="checkbox" name="sweetener" id="sweetener" checked>
-          <label class="form__label form__label--option" for="sweetener">сахарозаменитель</label>
+          <label class="form__label form__label--checkbox" for="sweetener">сахарозаменитель</label>
           <input class="form__checkbox" type="checkbox" name="water" id="water">
-          <label class="form__label form__label--option" for="water">питьевая вода</label>
+          <label class="form__label form__label--checkbox" for="water">питьевая вода</label>
           <input class="form__checkbox" type="checkbox" name="milk" id="milk">
-          <label class="form__label form__label--option" for="milk">молоко</label>
+          <label class="form__label form__label--checkbox" for="milk">молоко</label>
           <input class="form__checkbox" type="checkbox" name="vitamins" id="vitamins">
-          <label class="form__label form__label--option" for="vitamins">витамины</label>
+          <label class="form__label form__label--checkbox" for="vitamins">витамины</label>
         </fieldset>
         <button type="submit" class="button button--form">отправить заявку</button>
         <p class="form__text">* — Обязательные поля</p>
@@ -81,7 +81,7 @@
     </main>
 
     <footer class="site-footer container">
-      <div class="site-footer__cooperation">
+      <div class="site-footer__cooperation site-footer__cooperation--inner-page">
         <p class="site-footer__text">приглашаем к сотрудничеству дилеров!</p>
         <address class="site-footer__address">ул. Большая Конюшенная, д. 19/8 <span class="site-footer__town">Санкт-Петербург</span></address>
       </div>
