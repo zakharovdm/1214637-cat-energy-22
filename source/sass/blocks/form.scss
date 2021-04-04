@@ -51,9 +51,21 @@
     color: $dark-grey;
   }
 
+  &:hover {
+    border-color: $medium-grey;
+  }
+
+  &:focus {
+    border-color: $dark-grey;
+  }
+
   &--comment {
     width: 280px;
     min-height: 150px;
+  }
+
+  &--error {
+    border-color: $red;
   }
 }
 
