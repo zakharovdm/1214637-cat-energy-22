@@ -27,16 +27,16 @@
   font-size: 16px;
   text-transform: uppercase;
   color: $dark-grey;
-}
 
-.form__label--option {
-  padding: 0 16px;
+  &--option {
+    padding: 0 16px;
 
-  color: $darked-grey;
-}
+    color: $darked-grey;
+  }
 
-.form__label--checkbox {
-  color: $black;
+  &--checkbox {
+    color: $black;
+  }
 }
 
 .form__input {
@@ -50,11 +50,11 @@
     text-transform: uppercase;
     color: $dark-grey;
   }
-}
 
-.form__input--comment {
-  width: 280px;
-  min-height: 150px;
+  &--comment {
+    width: 280px;
+    min-height: 150px;
+  }
 }
 
 .form__title {
