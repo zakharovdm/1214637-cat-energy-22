@@ -22,7 +22,7 @@
 }
 
 .form__label {
-  padding: 0 13px 0 20px;
+  padding: 0 13px 0 0;
 
   font-size: 16px;
   text-transform: uppercase;
@@ -60,8 +60,9 @@
   }
 
   &--comment {
-    width: 280px;
-    min-height: 150px;
+    width: 255px;
+    min-height: 125px;
+    padding: 10px 10px 13px 13px;
   }
 
   &--error {
@@ -71,7 +72,7 @@
 
 .form__title {
   width: 210px;
-  padding: 0 0 35px 20px;
+  padding: 0 0 35px;
 
   font-size: 24px;
   line-height: 26px;
