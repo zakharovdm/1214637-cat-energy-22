@@ -4,10 +4,10 @@
 
 .site-footer__cooperation {
   background-color: $white;
-}
 
-.site-footer__cooperation--inner-page {
-  background-color: $grey;
+  &--inner-page {
+    background-color: $grey;
+  }
 }
 
 .site-footer__text {

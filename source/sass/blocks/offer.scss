@@ -1,0 +1,19 @@
+.offer {
+  width: 280px;
+  min-height: 289px;
+  margin: 0 0 35px;
+
+  background: url("../../img/gift-mobile.jpg") no-repeat;
+}
+
+.offer__text {
+  width: 150px;
+  margin: 0 auto;
+  padding: 186px 5px 43px;
+
+  font-family: "Arial", sans-serif;
+  font-size: 16px;
+  line-height: 20px;
+  color: $white;
+  text-align: center;
+}

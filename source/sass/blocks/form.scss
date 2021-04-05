@@ -22,21 +22,21 @@
 }
 
 .form__label {
-  padding: 0 13px 0 20px;
+  padding: 0 13px 0 0;
 
   font-size: 16px;
   text-transform: uppercase;
   color: $dark-grey;
-}
 
-.form__label--option {
-  padding: 0 16px;
+  &--option {
+    padding: 0 16px;
 
-  color: $darked-grey;
-}
+    color: $darked-grey;
+  }
 
-.form__label--checkbox {
-  color: $black;
+  &--checkbox {
+    color: $black;
+  }
 }
 
 .form__input {
@@ -50,16 +50,29 @@
     text-transform: uppercase;
     color: $dark-grey;
   }
-}
 
-.form__input--comment {
-  width: 280px;
-  min-height: 150px;
+  &:hover {
+    border-color: $medium-grey;
+  }
+
+  &:focus {
+    border-color: $dark-grey;
+  }
+
+  &--comment {
+    width: 255px;
+    min-height: 125px;
+    padding: 10px 10px 13px 13px;
+  }
+
+  &--error {
+    border-color: $red;
+  }
 }
 
 .form__title {
   width: 210px;
-  padding: 0 0 35px 20px;
+  padding: 0 0 35px;
 
   font-size: 24px;
   line-height: 26px;

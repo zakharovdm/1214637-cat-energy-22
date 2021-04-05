@@ -1,12 +1,13 @@
 .promo__wrapper {
   min-height: 302px;
-  max-width: 320px;
+  width: 320px;
 
   color: $white;
   text-align: center;
 
   background: url("../../img/green-layer.png"), url("../../img/background-promo-mobile.jpg") no-repeat;
   background-color: $green;
+  overflow: hidden;
 }
 
 .promo__title {

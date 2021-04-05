@@ -1,0 +1,33 @@
+.product {
+  width: 280px;
+}
+
+.product__title {
+  width: 80px;
+  margin: 0;
+  padding: 19px 84px 18px 36px;
+
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+  color: $darked-grey;
+  text-transform: uppercase;
+}
+
+.product__show {
+  margin: 0;
+
+  font-size: 16px;
+  line-height: 20px;
+  color: $almost-black;
+  text-transform: uppercase;
+}
+
+.product__text {
+  margin: 0;
+
+  font-family: "Arial", sans-serif;
+  font-size: 12px;
+  line-height: 16px;
+  color: $dark-grey;
+}

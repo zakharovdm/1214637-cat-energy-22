@@ -1,0 +1,20 @@
+.item-goods__title {
+  margin: 0;
+
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 16px;
+  text-transform: uppercase;
+  color: $darked-grey;
+}
+
+.item-goods__features {
+  font-family: "Arial", sans-serif;
+  font-size: 14px;
+  line-height: 14px;
+  color: $dark-grey;
+}
+
+.item-goods__value {
+  margin: 0;
+}

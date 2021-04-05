@@ -17,15 +17,37 @@
   &:active {
     color: rgba($white, 0.3);
   }
-}
 
-.button--form {
-  width: 280px;
-  padding: 10px 5px;
+  &--form {
+    width: 280px;
+    padding: 10px 5px;
 
-  font-size: 16px;
-  line-height: 20px;
+    font-size: 16px;
+    line-height: 20px;
 
-  border: none;
-  cursor: pointer;
+    border: none;
+    cursor: pointer;
+  }
+
+  &--catalog {
+    padding: 10px 5px;
+
+    font-size: 16px;
+    line-height: 20px;
+  }
+
+  &--show {
+    background-color: $grey;
+    color: $dark-grey;
+
+    &:hover,
+    &:focus {
+      background-color: $very-light-grey;
+    }
+
+    &:active {
+      background-color: $very-light-grey;
+      color: rgba($dark-grey, 0.3);
+    }
+  }
 }
