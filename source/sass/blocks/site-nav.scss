@@ -4,7 +4,7 @@
   @media (min-width: $tablet-width) {
     margin: 42px 0 62px 95px;
     display: grid;
-    grid-template-columns: max-content max-content max-content;
+    grid-template-columns: repeat(3, max-content);
     grid-gap: 35px;
   }
 
