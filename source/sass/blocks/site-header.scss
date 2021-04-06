@@ -1,0 +1,23 @@
+@media (min-width: $tablet-width) {
+  .site-header {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+.site-header__logo {
+  width: 190px;
+  margin: 12px 0 16px;
+  display: flex;
+  justify-content: space-between;
+
+  @media (min-width: $tablet-width) {
+    margin: 24px 0 0;
+    display: block;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin: 53px 0 0;
+    display: block;
+  }
+}

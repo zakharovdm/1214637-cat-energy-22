@@ -1,5 +1,16 @@
 .site-nav__list {
   @include reset-list;
+
+  @media (min-width: $tablet-width) {
+    margin: 42px 0 62px 95px;
+    display: grid;
+    grid-template-columns: max-content max-content max-content;
+    grid-gap: 35px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin: 69px 0 42px 95px;
+  }
 }
 
 .site-nav__link {
@@ -11,6 +22,7 @@
   line-height: 20px;
   text-transform: uppercase;
   color: $black;
+  text-align: center;
 
   &:hover,
   &:focus {
@@ -20,4 +32,25 @@
   &:active {
     color: rgba($black, 0.1);
   }
+
+  @media (min-width: $tablet-width) {
+    padding: 0;
+
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 24px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 0;
+
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 30px;
+    color: $white;
+  }
+}
+
+.site-nav__toggle {
+  display: none;
 }
