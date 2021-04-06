@@ -9,6 +9,19 @@
 
   background-color: $green;
 
+  @media (min-width: $tablet-width) {
+    width: 234px;
+    padding: 17px 5px;
+    margin-left: 90px;
+
+    font-size: 20px;
+    line-height: 20px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-left: 80px;
+  }
+
   &:hover,
   &:focus {
     background-color: $dark-green;

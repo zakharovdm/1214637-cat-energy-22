@@ -8,15 +8,40 @@
   background: url("../../img/green-layer.png"), url("../../img/background-promo-mobile.jpg") no-repeat;
   background-color: $green;
   overflow: hidden;
+
+  @media (min-width: $tablet-width) {
+    width: auto;
+    min-height: 250px;
+
+    background: $white;
+  }
+
+  @media (min-width: $tablet-width) {
+    min-height: 330px;
+  }
 }
 
 .promo__title {
   margin: 0;
-  padding: 23px 10px 29px;
+  padding: 27px 35px 29px;
 
   font-weight: 400;
   font-size: 36px;
   line-height: 36px;
+
+  @media (min-width: $tablet-width) {
+    width: 420px;
+    padding: 0 117px 41px;
+
+    font-size: 60px;
+    line-height: 60px;
+    color: $black;
+    text-align: left;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 90px 190px 41px;
+  }
 }
 
 .promo__slogan {
@@ -25,4 +50,25 @@
 
   line-height: 14px;
   text-transform: uppercase;
+
+  @media (min-width: $tablet-width) {
+    margin-left: 108px;
+
+    font-size: 20px;
+    line-height: 20px;
+    color: $black;
+    text-align: left;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-left: 180px;
+  }
+}
+
+.promo__img {
+  margin-top: -140px;
+
+  @media (min-width: $tablet-width) {
+    display: none;
+  }
 }
