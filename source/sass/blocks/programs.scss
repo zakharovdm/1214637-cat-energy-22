@@ -1,12 +1,27 @@
 .programs__list {
   @include reset-list;
+  margin: 0 0 33px;
+
+  @media (min-width: $tablet-width) {
+    display: flex;
+    flex-direction: column;
+  }
+
+  @media (min-width: $desktop-width) {
+    flex-direction: row;
+    justify-content: space-between;
+  }
 }
 
 .programs__item {
-  width: 280px;
-  margin: 22px 0 20px;
+  min-width: 280px;
+  margin: 22px 0 0;
 
   background-color: $grey;
+
+  @media (min-width: $desktop-width) {
+    min-width: 570px;
+  }
 }
 
 .programs__title {
