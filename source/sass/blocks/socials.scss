@@ -1,5 +1,9 @@
 .socials {
   @include reset-list;
+  width: 130px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
 }
 
 .socials__item {

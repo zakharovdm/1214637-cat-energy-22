@@ -3,6 +3,9 @@
 }
 
 .site-footer__cooperation {
+  display: flex;
+  justify-content: space-between;
+
   background-color: $white;
 
   &--inner-page {
@@ -37,5 +40,17 @@
 
   &:active {
     color: rgba($dark-grey, 0.3);
+  }
+}
+
+.site-footer__logo {
+  display: block;
+  text-align: center;
+}
+
+.site-footer__wrapper {
+  @media (min-width: $tablet-width or $desktop-width) {
+    display: flex;
+    justify-content: space-between;
   }
 }
