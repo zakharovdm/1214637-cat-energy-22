@@ -1,5 +1,16 @@
 .example {
   background-color: $light-grey;
+
+  @media (min-width: $tablet-width) {
+    background-color: $white;
+  }
+
+  @media (min-width: $desktop-width) {
+    display: flex;
+    justify-content: space-between;
+
+    background-color: $light-grey;
+  }
 }
 
 .example__title {
@@ -11,15 +22,27 @@
 }
 
 .example__text {
-  width: 280px;
-
   font-family: "Arial", sans-serif;
   color: $dark-grey;
+
+  @media (min-width: $desktop-width) {
+    width: 435px;
+  }
+}
+
+.example__list {
+  display: flex;
+  justify-content: space-between;
+
+  @media (min-width: $tablet-width) {
+    width: 366px;
+  }
 }
 
 .example__value {
   font-size: 24px;
   line-height: 24px;
+  text-align: center;
 }
 
 .example__parameter {
@@ -31,4 +54,39 @@
 .example__cost {
   line-height: 20px;
   text-transform: uppercase;
+  text-align: center;
+
+  @media (min-width: $tablet-width) {
+    width: 130px;
+    text-align: right;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 220px;
+  }
+}
+
+.example__inner {
+  @media (min-width: $tablet-width) {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  @media (min-width: $desktop-width) {
+    flex-direction: column;
+  }
+}
+
+.example__slider {
+  @media (min-width: $tablet-width) {
+    background-color: $light-grey;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 690px;
+  }
+}
+
+.example__slide:nth-child(2) {
+  display: none;
 }
