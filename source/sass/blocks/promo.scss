@@ -1,3 +1,10 @@
+.promo {
+  @media (min-width: $tablet-width) {
+    min-height: 835px;
+    background: url("../img/cat-energy-tablet.png") 10% 95% no-repeat;
+  }
+}
+
 .promo__wrapper {
   min-height: 302px;
   min-width: 320px;
@@ -7,17 +14,21 @@
 
   background: url("../img/green-layer.png"), url("../img/background-promo-mobile.jpg") 50% 50% no-repeat;
   background-color: $green;
-  overflow: hidden;
 
   @media (min-width: $tablet-width) {
-    width: auto;
-    min-height: 250px;
+    min-height: 0;
 
-    background: $white;
+    background: transparent;
   }
 
-  @media (min-width: $tablet-width) {
+  @media (min-width: $desktop-width) {
     min-height: 330px;
+  }
+}
+
+.promo__inner {
+  @media (min-width: $tablet-width) {
+    width: 588px;
   }
 }
 
@@ -31,7 +42,6 @@
 
   @media (min-width: $tablet-width) {
     width: 420px;
-    padding: 0 117px 41px;
 
     font-size: 60px;
     line-height: 60px;
@@ -51,7 +61,7 @@
   text-transform: uppercase;
 
   @media (min-width: $tablet-width) {
-    margin-left: 108px;
+    padding: 0 0 50px;
 
     font-size: 20px;
     line-height: 20px;
