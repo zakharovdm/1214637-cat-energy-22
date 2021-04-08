@@ -1,11 +1,11 @@
 .promo__wrapper {
   min-height: 302px;
-  width: 320px;
+  width: 100%;
 
   color: $white;
   text-align: center;
 
-  background: url("../../img/green-layer.png"), url("../../img/background-promo-mobile.jpg") no-repeat;
+  background: url("../img/green-layer.png"), url("../img/background-promo-mobile.jpg") 50% 50% no-repeat;
   background-color: $green;
   overflow: hidden;
 
@@ -23,7 +23,7 @@
 
 .promo__title {
   margin: 0;
-  padding: 27px 35px 29px;
+  padding: 27px 0;
 
   font-weight: 400;
   font-size: 36px;
@@ -46,7 +46,6 @@
 
 .promo__slogan {
   margin: 0;
-  padding: 0 10px;
 
   line-height: 14px;
   text-transform: uppercase;
