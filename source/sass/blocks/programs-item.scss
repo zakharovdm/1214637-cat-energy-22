@@ -1,20 +1,8 @@
-.programs__list {
-  @include reset-list;
-  margin: 0 0 33px;
-
-  @media (min-width: $tablet-width) {
-    display: flex;
-    flex-direction: column;
-  }
-
-  @media (min-width: $desktop-width) {
-    flex-direction: row;
-    justify-content: space-between;
-  }
-}
-
-.programs__item {
+.programs-item {
+  display: flex;
+  flex-direction: column;
   margin: 22px 0 0;
+  padding: 35px 20px 18px;
 
   background-color: $grey;
 
@@ -23,9 +11,9 @@
   }
 }
 
-.programs__title {
+.programs-item__title {
   margin: 0;
-  padding: 30px 10px 30px 91px;
+  padding: 0 0 30px 70px;
 
   font-weight: 400;
   font-size: 24px;
@@ -33,18 +21,17 @@
   text-transform: uppercase;
 }
 
-.programs__text {
+.programs-item__text {
   width: 227px;
   margin: 0;
-  padding: 0 33px 40px 20px;
+  padding: 0 0 40px;
 
   font-family: "Arial", sans-serif;
   color: $dark-grey;
 }
 
-.programs__link {
-  display: block;
-  padding: 0 10px 23px 19px;
+.programs-item__link {
+  margin-top: auto;
 
   font-size: 16px;
   line-height: 16px;
