@@ -1,4 +1,6 @@
 .example {
+  min-width: 320px;
+
   background-color: $light-grey;
 
   @media (min-width: $tablet-width) {

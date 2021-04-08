@@ -3,14 +3,17 @@
 }
 
 .site-footer__cooperation {
-  display: flex;
-  justify-content: space-between;
-
+  min-width: 320px;
   background-color: $white;
 
   &--inner-page {
     background-color: $grey;
   }
+}
+
+.site-footer__wrap {
+  display: flex;
+  justify-content: space-between;
 }
 
 .site-footer__text {
@@ -53,4 +56,8 @@
     display: flex;
     justify-content: space-between;
   }
+}
+
+.site-footer__map {
+  min-width: 320px;
 }
