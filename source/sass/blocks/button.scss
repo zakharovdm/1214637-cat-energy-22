@@ -1,24 +1,21 @@
 .button {
-  display: block;
-  width: 270px;
+  display: inline-block;
+  min-width: 270px;
   padding: 11px 5px;
 
   text-transform: uppercase;
   text-align: center;
   color: $white;
+  vertical-align: middle;
 
   background-color: $green;
 
   @media (min-width: $tablet-width) {
-    width: 234px;
+    min-width: 234px;
     padding: 17px 5px;
 
     font-size: 20px;
     line-height: 20px;
-  }
-
-  @media (min-width: $desktop-width) {
-    margin-left: 80px;
   }
 
   &:hover,
@@ -31,7 +28,7 @@
   }
 
   &--form {
-    width: 280px;
+    min-width: 280px;
     padding: 10px 5px;
 
     font-size: 16px;
