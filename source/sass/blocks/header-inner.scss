@@ -1,0 +1,13 @@
+.header-inner {
+  @media (max-width: $not-desktop-width) {
+    width: 280px;
+    padding: 0 20px;
+    margin: 0 auto;
+  }
+
+  @media (min-width: $tablet-width) and (max-width: $not-desktop-width) {
+    width: 710px;
+    padding: 0 30px;
+    margin: 0 auto;
+  }
+}

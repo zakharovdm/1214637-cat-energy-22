@@ -1,11 +1,11 @@
 .promo {
   @media (min-width: $tablet-width) {
-    min-height: 835px;
-    background: url("../img/cat-energy-tablet.png") 10% 95% no-repeat;
+    margin-bottom: 450px;
   }
 
   @media (min-width: $desktop-width) {
-    background: $white;
+    margin-top: 200px;
+    margin-bottom: 200px;
   }
 }
 
@@ -28,11 +28,13 @@
 
 .promo__inner {
   @media (min-width: $tablet-width) {
+    position: relative;
     width: 588px;
   }
 
   @media (min-width: $desktop-width) {
     width: 1160px;
+    margin-left: 190px;
   }
 }
 
@@ -73,7 +75,34 @@
 .promo__img {
   margin-top: -140px;
 
-  @media (min-width: $tablet-width) {
+  @media (min-width: $tablet-width or $desktop-width) {
     display: none;
+  }
+}
+
+.promo__img-tablet {
+  display: none;
+
+  @media (min-width: $tablet-width) {
+    position: absolute;
+    top: -30px;
+    right: 30px;
+    z-index: -1;
+    display: block;
+  }
+
+  @media (min-width: $desktop-width) {
+    display: none;
+  }
+}
+
+.promo__img-desktop {
+  display: none;
+
+  @media (min-width: $desktop-width) {
+    display: block;
+    position: absolute;
+    top: -300px;
+    right: 265px;
   }
 }

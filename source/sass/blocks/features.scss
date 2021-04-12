@@ -32,7 +32,7 @@
 @media (min-width: $tablet-width or $desktop-width) {
   .features__item {
     width: 247px;
-    min-height: 280px;
+    min-height: 280px; /*Временно задал высоту, чтобы посмотреть как будет выглядеть блок*/
   }
 }
 

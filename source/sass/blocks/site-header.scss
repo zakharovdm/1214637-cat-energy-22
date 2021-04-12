@@ -1,7 +1,12 @@
-@media (min-width: $tablet-width) {
-  .site-header {
+.site-header {
+  @media (min-width: $tablet-width) {
     display: flex;
     justify-content: space-between;
+  }
+
+  @media (min-width: $desktop-width) {
+    order: 1;
+    justify-self: end;
   }
 }
 
@@ -17,6 +22,9 @@
   }
 
   @media (min-width: $desktop-width) {
+    position: absolute;
+    left: 100px;
+
     margin: 53px 0 0;
     display: block;
   }
