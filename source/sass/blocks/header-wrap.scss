@@ -4,3 +4,36 @@
     grid-template-rows: 200px 1fr;
   }
 }
+
+.header-wrap__top {
+  @media (min-width: $desktop-width) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-row: 1/-1;
+    grid-column: 1/-1;
+  }
+}
+
+.header-wrap__right {
+  @media (min-width: $desktop-width) {
+    min-width: 720px;
+    min-height: 694px;
+
+    background: url("../img/green-layer.png"), url("../img/background-promo-desktop.jpg") right no-repeat;
+    background-color: darken($green, 30%);
+  }
+}
+
+.header-wrap__bottom {
+  @media (min-width: $desktop-width) {
+    grid-row: 2/-1;
+    grid-column: 1/-1;
+  }
+}
+
+.header-wrap__inner {
+  @media (min-width: $desktop-width) {
+    width: 1400px;
+    margin: 0 auto;
+  }
+}
