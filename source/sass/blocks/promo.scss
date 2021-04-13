@@ -1,11 +1,11 @@
 .promo {
   @media (min-width: $tablet-width) {
-    margin-bottom: 450px;
+    display: grid;
+    grid-template-rows: 1fr 450px;
   }
 
   @media (min-width: $desktop-width) {
-    margin-top: 200px;
-    margin-bottom: 200px;
+    display: block;
   }
 }
 

@@ -1,9 +1,9 @@
 .top-level {
   @media (min-width: $desktop-width) {
     display: grid;
+    grid-template-columns: 1fr 1fr;
     grid-row: 1/-1;
     grid-column: 1/-1;
-    grid-template-columns: 1fr 1fr;
   }
 }
 
