@@ -17,7 +17,7 @@
   text-align: center;
 
   background: url("../img/green-layer.png"), url("../img/background-promo-mobile.jpg") 50% 50% no-repeat;
-  background-color: $green;
+  background-color: darken($green, 25%);
 
   @media (min-width: $tablet-width) {
     min-height: 0;
@@ -103,6 +103,6 @@
     display: block;
     position: absolute;
     top: -300px;
-    right: 265px;
+    right: 300px;
   }
 }

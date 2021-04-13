@@ -1,7 +1,6 @@
 .header-wrap {
   @media (min-width: $desktop-width) {
     display: grid;
-    grid-template-columns: 720px 1fr;
-    grid-gap: 15px;
+    grid-template-rows: 200px 1fr;
   }
 }

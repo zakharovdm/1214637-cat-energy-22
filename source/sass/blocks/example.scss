@@ -9,7 +9,7 @@
 
   @media (min-width: $desktop-width) {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
 
     background-color: $light-grey;
   }
@@ -82,10 +82,6 @@
 .example__slider {
   @media (min-width: $tablet-width) {
     background-color: $light-grey;
-  }
-
-  @media (min-width: $desktop-width) {
-    width: 690px;
   }
 }
 
