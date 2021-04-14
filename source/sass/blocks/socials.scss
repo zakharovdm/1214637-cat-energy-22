@@ -1,9 +1,14 @@
 .socials {
   @include reset-list;
+
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
 }
 
 .socials__item {
   width: 20px;
   height: 20px;
+  margin: 0 20px 0 0;
   background-color: $red;
 }

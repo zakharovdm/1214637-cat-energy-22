@@ -1,18 +1,52 @@
 .features__title {
   margin: 0;
+  padding: 0 0 32px;
 
   font-weight: 400;
   font-size: 36px;
   line-height: 40px;
+
+  @media (min-width: $tablet-width) {
+    font-size: 60px;
+    line-height: 60px;
+  }
 }
 
 .features__list {
   @include reset-list;
+
+  @media (min-width: $tablet-width) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-gap: 30px;
+  }
+
+  @media (min-width: $desktop-width) {
+    grid-template-columns: repeat(4, max-content);
+    grid-template-rows: max-content;
+    grid-gap: 80px;
+  }
+}
+
+@media (min-width: $tablet-width or $desktop-width) {
+  .features__item {
+    width: 247px;
+    min-height: 280px; /*Временно задал высоту, чтобы посмотреть как будет выглядеть блок*/
+  }
 }
 
 .features__text {
+  margin: 0;
   width: 200px;
 
   font-family: "Arial", sans-serif;
   color: $dark-grey;
+
+  @media (min-width: $tablet-width) {
+    width: 250px;
+
+    font-size: 16px;
+    line-height: 24px;
+  }
 }
