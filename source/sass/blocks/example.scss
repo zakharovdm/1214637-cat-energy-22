@@ -1,4 +1,6 @@
 .example {
+  display: flex;
+  flex-direction: column;
   min-width: 320px;
 
   background-color: $light-grey;
@@ -8,10 +10,19 @@
   }
 
   @media (min-width: $desktop-width) {
-    display: flex;
+    flex-direction: row;
     justify-content: space-around;
 
     background-color: $light-grey;
+  }
+}
+
+.example__wrap {
+  width: 280px;
+  align-self: center;
+
+  @media (min-width: $tablet-width) {
+    width: 710px;
   }
 }
 
