@@ -5,6 +5,11 @@
   font-weight: 400;
   font-size: 36px;
   line-height: 36px;
+
+  @media (min-width: $tablet-width) {
+    font-size: 60px;
+    line-height: 60px;
+  }
 }
 
 .site-main__text {
@@ -13,4 +18,10 @@
   padding: 0 0 39px;
 
   text-transform: uppercase;
+
+  @media (min-width: $tablet-width) {
+    width: 330px;
+    font-size: 20px;
+    line-height: 30px;
+  }
 }

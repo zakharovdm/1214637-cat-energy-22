@@ -1,3 +1,11 @@
+.form__wrapper {
+  @media (min-width: $desktop-width) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 80px;
+  }
+}
+
 .form__fields {
   margin: 0;
   padding: 0;
@@ -9,6 +17,8 @@
 
   &:nth-child(2) {
     margin-bottom: 50px;
+
+    align-self: center;
   }
 
   &:nth-child(3),
@@ -21,6 +31,32 @@
   }
 }
 
+.form__inner {
+  display: flex;
+  align-items: baseline;
+}
+
+.form__wrap-contacts {
+  @media (min-width: $desktop-width) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 78px;
+  }
+}
+
+.form__wrap-checkbox {
+  @media (min-width: $tablet-width) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 10px;
+  }
+
+  @media (min-width: $desktop-width) {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
 .form__label {
   padding: 0 13px 0 0;
 
@@ -28,13 +64,22 @@
   text-transform: uppercase;
   color: $dark-grey;
 
+  @media (min-width: $tablet-width) {
+    font-size: 20px;
+    line-height: 30px;
+  }
+
   &--option {
     padding: 0 16px;
+    margin-bottom: 18px;
 
     color: $darked-grey;
   }
 
   &--checkbox {
+    padding: 0 18px;
+    margin-bottom: 20px;
+
     color: $black;
   }
 }
@@ -42,13 +87,26 @@
 .form__input {
   padding: 13px 15px;
   margin: 0 0 13px;
+  flex-grow: 1;
 
   border: 1px solid $lighted-grey;
+
+  @media (min-width: $tablet-width) {
+    padding: 10px 15px 10px;
+
+    font-size: 20px;
+    line-height: 30px;
+  }
 
   &::placeholder {
     font-size: 16px;
     text-transform: uppercase;
     color: $dark-grey;
+
+    @media (min-width: $tablet-width) {
+      font-size: 20px;
+      line-height: 30px;
+    }
   }
 
   &:hover {
@@ -63,6 +121,15 @@
     width: 255px;
     min-height: 125px;
     padding: 10px 10px 13px 13px;
+
+    @media (min-width: $tablet-width) {
+      width: 600px;
+      padding-left: 19px;
+    }
+
+    @media (min-width: $desktop-width) {
+      width: 1190px;
+    }
   }
 
   &--error {
@@ -76,6 +143,14 @@
 
   font-size: 24px;
   line-height: 26px;
+
+  @media (min-width: $tablet-width) {
+    width: auto;
+    padding: 0 0 76px;
+
+    font-size: 36px;
+    line-height: 36px;
+  }
 }
 
 .form__text {

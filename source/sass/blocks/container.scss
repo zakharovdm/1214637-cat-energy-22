@@ -6,6 +6,10 @@
   @media (min-width: $tablet-width) {
     width: 710px;
     padding: 0 30px;
+
+    &--form {
+      width: 630px;
+    }
   }
 
   @media (min-width: $desktop-width) {
