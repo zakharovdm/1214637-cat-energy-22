@@ -195,7 +195,10 @@
   }
 
   @media (min-width: $desktop-width) {
-    width: 830px;
+    display: grid;
+    grid-template-columns: 1fr max-content;
+    grid-template-rows: 52px;
+    grid-gap: 80px;
     margin-bottom: 82px;
   }
 }
