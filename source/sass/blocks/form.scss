@@ -24,6 +24,10 @@
   &:nth-child(3),
   &:nth-child(4) {
     margin-bottom: 10px;
+
+    @media (min-width: $tablet-width) {
+      margin-bottom: 35px;
+    }
   }
 
   &:nth-child(5) {
@@ -34,6 +38,28 @@
 .form__inner {
   display: flex;
   align-items: baseline;
+
+  @media (min-width: $tablet-width) {
+    &--right {
+      justify-self: end;
+    }
+
+    &--center {
+      justify-self: end;
+      margin-right: 40px;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    &--right {
+      justify-self: auto;
+    }
+
+    &--center {
+      justify-self: auto;
+      margin-right: 0;
+    }
+  }
 }
 
 .form__wrap-contacts {
@@ -46,6 +72,7 @@
 
 .form__wrap-checkbox {
   @media (min-width: $tablet-width) {
+    width: 530px;
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-gap: 10px;
@@ -54,6 +81,10 @@
   @media (min-width: $desktop-width) {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
+  }
+
+  @media (min-width: $desktop-width) {
+    width: auto;
   }
 }
 
@@ -153,7 +184,28 @@
   }
 }
 
+.form__inner-bottom {
+  margin-bottom: 22px;
+
+  @media (min-width: $tablet-width) {
+    width: 530px;
+    margin-bottom: 72px;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 830px;
+    margin-bottom: 82px;
+  }
+}
+
 .form__text {
   font-family: "Arial", sans-serif;
   line-height: 16px;
+  text-align: center;
+
+  @media (min-width: $tablet-width) {
+    font-size: 16px;
+  }
 }
