@@ -1,7 +1,7 @@
 .promo {
   @media (min-width: $tablet-width) {
     display: grid;
-    grid-template-rows: 1fr 450px;
+    grid-template-rows: 1fr 500px;
   }
 
   @media (min-width: $desktop-width) {
