@@ -1,13 +1,24 @@
 .features-product {
   margin: 0;
   padding: 0 0 22px;
+
+  @media (min-width: $tablet-width) {
+    padding: 0 0 33px;
+  }
 }
 
 .features-product__item {
+  display: flex;
+  justify-content: space-between;
+
   font-family: "Arial", sans-serif;
   font-size: 12px;
   line-height: 16px;
   color: $dark-grey;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 14px;
+  }
 }
 
 .features-product__value {
