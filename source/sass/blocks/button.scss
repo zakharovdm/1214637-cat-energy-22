@@ -60,6 +60,7 @@
   }
 
   &--show {
+    grid-row: 3/4;
     background-color: $grey;
     color: $dark-grey;
 
