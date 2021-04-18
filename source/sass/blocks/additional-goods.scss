@@ -1,12 +1,29 @@
 .additional-goods__title {
-  margin: 0;
-  padding: 25px 75px 49px 19px;
+  margin: 0 0 50px 0;
 
   font-weight: 400;
   font-size: 24px;
   line-height: 24px;
+
+  @media (min-width: $tablet-width) {
+    font-size: 36px;
+    line-height: 36px;
+  }
 }
 
 .additional-goods__list {
   @include reset-list;
+
+  @media (min-width: $tablet-width) {
+    display: grid;
+    grid-template-columns: 630px;
+    justify-content: center;
+    grid-gap: 55px;
+  }
+
+  @media (min-width: $desktop-width) {
+    grid-template-columns: 895px;
+    justify-content: start;
+    grid-gap: 30px;
+  }
 }

@@ -54,6 +54,10 @@
     font-size: 16px;
     line-height: 20px;
 
+    @media (min-width: $tablet-width) {
+      grid-column: 1/-1;
+    }
+
     @media (min-width: $desktop-width) {
       min-width: 168px;
     }
@@ -73,5 +77,9 @@
       background-color: $very-light-grey;
       color: rgba($dark-grey, 0.3);
     }
+  }
+
+  &--add {
+    grid-column: 3/4;
   }
 }
