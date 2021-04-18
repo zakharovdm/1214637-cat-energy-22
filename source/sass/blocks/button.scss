@@ -80,6 +80,8 @@
   }
 
   &--add {
-    grid-column: 3/4;
+    @media (min-width: $desktop-width) {
+      grid-column: 3/4;
+    }
   }
 }
