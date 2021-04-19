@@ -53,9 +53,18 @@
 
     font-size: 16px;
     line-height: 20px;
+
+    @media (min-width: $tablet-width) {
+      grid-column: 1/-1;
+    }
+
+    @media (min-width: $desktop-width) {
+      min-width: 168px;
+    }
   }
 
   &--show {
+    grid-row: 3/4;
     background-color: $grey;
     color: $dark-grey;
 
@@ -67,6 +76,12 @@
     &:active {
       background-color: $very-light-grey;
       color: rgba($dark-grey, 0.3);
+    }
+  }
+
+  &--add {
+    @media (min-width: $desktop-width) {
+      grid-column: 3/4;
     }
   }
 }

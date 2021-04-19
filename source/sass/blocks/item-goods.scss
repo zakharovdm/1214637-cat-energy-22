@@ -1,18 +1,57 @@
+.item-goods {
+  margin-bottom: 30px;
+
+  @media (min-width: $tablet-width) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 0;
+    grid-template-columns: 1fr 1fr 245px;
+    align-items: baseline;
+  }
+}
+
 .item-goods__title {
-  margin: 0;
+  margin: 0 0 13px 0;
 
   font-weight: 400;
   font-size: 16px;
   line-height: 16px;
   text-transform: uppercase;
   color: $darked-grey;
+
+  @media (min-width: $tablet-width) {
+    margin: 0 0 25px 0;
+
+    font-size: 20px;
+    line-height: 20px;
+  }
 }
 
 .item-goods__features {
+  margin: 0 0 15px 0;
+  display: flex;
+  justify-content: space-between;
+
   font-family: "Arial", sans-serif;
   font-size: 14px;
   line-height: 14px;
   color: $dark-grey;
+
+  @media (min-width: $tablet-width) {
+    width: 200px;
+    justify-self: end;
+
+    font-size: 16px;
+    line-height: 20px;
+  }
+
+  @media (min-width: $tablet-width) {
+    width: 280px;
+    justify-self: stretch;
+  }
 }
 
 .item-goods__value {
