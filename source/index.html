@@ -12,24 +12,28 @@
         <div class="header-wrap__left"></div>
         <div class="header-wrap__right"></div>
       </div>
-      <header class="site-header container">
-        <a class="site-header__logo">
-          <img src="img/logo-mobile.svg" width="34" height="38" alt="">
-          <img src="img/logo-mobile-text.svg" width="101" height="18" alt="Кэт энерджи">
-        </a>
-        <nav class="site-header__nav site-nav">
-          <button class="site-nav__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
-          <ul class="site-nav__list">
-            <li class="site-nav__item site-nav__item--current">
-              <a class="site-nav__link site-nav__link--desktop" href="#">Главная</a>
-            </li>
-            <li class="site-nav__item">
-              <a class="site-nav__link site-nav__link--desktop" href="catalog.html">Каталог продукции</a>
-            </li>
-            <li class="site-nav__item">
-              <a class="site-nav__link site-nav__link--desktop" href="form.html">Подбор программы</a>
-            </li>
-          </ul>
+      <header class="site-header">
+        <nav class="site-header__nav site-nav site-nav--closed site-nav--nojs">
+          <div class="site-nav__wrap">
+            <div class="site-nav__inner container">
+              <a class="site-nav__logo">
+                <img src="img/logo-mobile.svg" width="34" height="38" alt="">
+                <img src="img/logo-mobile-text.svg" width="101" height="18" alt="Кэт энерджи">
+              </a>
+              <button class="site-nav__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
+            </div>
+            <ul class="site-nav__list">
+              <li class="site-nav__item site-nav__item--current">
+                <a class="site-nav__link site-nav__link--desktop" href="#">Главная</a>
+              </li>
+              <li class="site-nav__item">
+                <a class="site-nav__link site-nav__link--desktop" href="catalog.html">Каталог продукции</a>
+              </li>
+              <li class="site-nav__item">
+                <a class="site-nav__link site-nav__link--desktop" href="form.html">Подбор программы</a>
+              </li>
+            </ul>
+          </div>
         </nav>
       </header>
 
@@ -173,5 +177,6 @@
         </div>
       </div>
     </footer>
+    <script src="js/script.js"></script>
   </body>
 </html>
