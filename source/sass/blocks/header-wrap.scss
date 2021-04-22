@@ -2,6 +2,8 @@
   @media (min-width: $desktop-width) {
     display: grid;
     grid-template-rows: 200px 1fr;
+
+    margin-bottom: 60px;
   }
 }
 

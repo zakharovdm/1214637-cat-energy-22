@@ -1,8 +1,10 @@
 .programs-item {
+  position: relative;
+
   display: flex;
   flex-direction: column;
   margin: 22px 0 0;
-  padding: 35px 20px 18px;
+  padding: 30px 20px 22px;
 
   background-color: $grey;
 
@@ -12,6 +14,70 @@
 
   @media (min-width: $desktop-width) {
     min-width: 466px;
+  }
+
+  &--slim::before {
+    content: "";
+    position: absolute;
+    top: 21px;
+    left: 22px;
+
+    width: 50px;
+    height: 55px;
+
+    background: url("../img/icons/icon-slim-mob.svg") no-repeat;
+
+    @media (min-width: $tablet-width) {
+      top: 70px;
+      left: 450px;
+
+      width: 200px;
+      height: 215px;
+
+      background: url("../img/icons/icon-slim-tablet.svg") no-repeat;
+    }
+
+    @media (min-width: $desktop-width) {
+      top: 41px;
+      left: 52px;
+
+      width: 100px;
+      height: 110px;
+
+      background: url("../img/icons/icon-slim-desktop.svg") no-repeat;
+    }
+  }
+
+  &--muscular::before {
+    content: "";
+    position: absolute;
+    top: 24px;
+    left: 13px;
+
+    width: 70px;
+    height: 50px;
+
+    background: url("../img/icons/icon-muscular-mob.svg") no-repeat;
+
+    @media (min-width: $tablet-width) {
+      top: 90px;
+      left: 410px;
+
+      width: 270px;
+      height: 200px;
+
+      background: url("../img/icons/icon-muscular-tablet.svg") no-repeat;
+    }
+
+    @media (min-width: $desktop-width) {
+      top: 47px;
+      left: 32px;
+
+      width: 135px;
+      height: 110px;
+
+      background: url("../img/icons/icon-muscular-desktop.svg") no-repeat;
+    }
   }
 }
 
@@ -29,9 +95,14 @@
     font-size: 36px;
     line-height: 36px;
   }
+
+  @media (min-width: $desktop-width) {
+    padding: 0 0 73px 170px;
+  }
 }
 
-.programs-item__text {
+.programs-item__text { /* stylelint-disable-line CssSyntaxError */
+  position: relative;
   margin: 0;
   padding: 0 0 40px;
 
@@ -49,9 +120,35 @@
       width: 340px;
     }
   }
+
+  @media (min-width: $desktop-width) {
+    width: 470px;
+    padding: 0 0 23px;
+
+    &--muscular {
+      width: 450px;
+    }
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    bottom: 18px;
+
+    width: 240px;
+    height: 2px;
+    background: $less-grey;
+
+    @media (min-width: $tablet-width) {
+      display: none;
+    }
+  }
 }
 
 .programs-item__link {
+  position: relative;
+
   margin-top: auto;
 
   font-size: 16px;
@@ -66,5 +163,31 @@
 
   &:active {
     color: rgba($black, 0.1);
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    left: 100px;
+    bottom: 3px;
+
+    width: 32px;
+    height: 11px;
+
+    background: url("../img/icons/arrow.svg") no-repeat;
+
+    @media (min-width: $tablet-width) {
+      left: 130px;
+      bottom: 10px;
+    }
+  }
+
+  &:hover::after,
+  &:focus::after {
+    background: url("../img/icons/arrow-hover.svg") no-repeat;
+  }
+
+  &:active::after {
+    background: url("../img/icons/arrow-active.svg") no-repeat;
   }
 }
