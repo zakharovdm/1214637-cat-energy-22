@@ -1,12 +1,14 @@
 .features__title {
   margin: 0;
-  padding: 0 0 32px;
+  padding: 0 0 38px;
 
   font-weight: 400;
   font-size: 36px;
   line-height: 40px;
 
   @media (min-width: $tablet-width) {
+    padding: 0 0 72px;
+
     font-size: 60px;
     line-height: 60px;
   }
@@ -15,11 +17,17 @@
 .features__list {
   @include reset-list;
 
+  margin-bottom: 46px;
+  display: grid;
+  grid-template-rows: repeat(4, 1fr);
+  justify-content: end;
+  grid-gap: 20px;
+
   @media (min-width: $tablet-width) {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr;
-    grid-gap: 30px;
+    grid-gap: 135px;
   }
 
   @media (min-width: $desktop-width) {
@@ -29,10 +37,93 @@
   }
 }
 
-@media (min-width: $tablet-width or $desktop-width) {
-  .features__item {
-    width: 247px;
-    min-height: 280px; /*Временно задал высоту, чтобы посмотреть как будет выглядеть блок*/
+.features__item {
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    left: -80px;
+
+    width: 60px;
+    height: 60px;
+
+    background-color: $green;
+
+    @media (min-width: $tablet-width) {
+      left: 0;
+
+      width: 80px;
+      height: 80px;
+    }
+  }
+
+  &--healthy::after {
+    content: "";
+    position: absolute;
+    left: -65px;
+    top: 13px;
+
+    width: 30px;
+    height: 32px;
+
+    background: url("../img/icons/icon_leaf.svg") no-repeat;
+
+    @media (min-width: $tablet-width) {
+      left: 26px;
+      top: 24px;
+    }
+  }
+
+  &--powder::after {
+    content: "";
+    position: absolute;
+    left: -65px;
+    top: 13px;
+
+    width: 30px;
+    height: 32px;
+
+    background: url("../img/icons/icon_tub.svg") no-repeat;
+
+    @media (min-width: $tablet-width) {
+      left: 26px;
+      top: 25px;
+    }
+  }
+
+  &--food::after {
+    content: "";
+    position: absolute;
+    left: -63px;
+    top: 15px;
+
+    width: 30px;
+    height: 32px;
+
+    background: url("../img/icons/icon_eat.svg") no-repeat;
+
+    @media (min-width: $tablet-width) {
+      left: 26px;
+      top: 25px;
+    }
+  }
+
+  &--time::after {
+    content: "";
+    position: absolute;
+    left: -65px;
+    top: 13px;
+
+    width: 30px;
+    height: 32px;
+
+    background: url("../img/icons/icon_alarm.svg") no-repeat;
+
+    @media (min-width: $tablet-width) {
+      left: 24px;
+      top: 24px;
+    }
   }
 }
 
@@ -45,8 +136,35 @@
 
   @media (min-width: $tablet-width) {
     width: 250px;
+    margin-top: 110px;
 
     font-size: 16px;
     line-height: 24px;
+  }
+}
+
+.features__number {
+  display: none;
+
+  @media (min-width: $tablet-width) {
+    position: absolute;
+    left: 115px;
+    top: -40px;
+    z-index: -1;
+
+    display: block;
+
+    font-family: "Oswald", "Arial", sans-serif;
+    font-size: 280px;
+    line-height: 280px;
+    color: $grey;
+  }
+}
+
+.features__text br {
+  display: none;
+
+  @media (min-width: $tablet-width) {
+    display: inline;
   }
 }
