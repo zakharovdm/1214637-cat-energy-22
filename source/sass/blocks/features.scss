@@ -24,6 +24,7 @@
   grid-gap: 20px;
 
   @media (min-width: $tablet-width) {
+    margin-bottom: 150px;
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr;
@@ -31,6 +32,7 @@
   }
 
   @media (min-width: $desktop-width) {
+    margin-bottom: 260px;
     grid-template-columns: repeat(4, max-content);
     grid-template-rows: max-content;
     grid-gap: 80px;
