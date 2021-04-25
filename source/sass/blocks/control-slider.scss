@@ -1,10 +1,85 @@
 .control-slider {
+  width: 228px;
   display: flex;
   justify-content: space-between;
+  align-items: center;
+
+  @media (min-width: $tablet-width) {
+    width: 565px;
+  }
 }
 
 .control-slider__text {
   font-size: 16px;
   line-height: 20px;
   text-transform: uppercase;
+
+  @media (min-width: $tablet-width) {
+    font-size: 20px;
+    line-height: 30px;
+
+    border-bottom: 1px dotted rgba($black, 0.25);
+  }
+}
+
+.control-slider__scale {
+  width: 84px;
+  height: 14px;
+
+  background-color: $white;
+  border: 1px solid $medium-grey;
+  border-radius: 6px;
+
+  @media (min-width: $tablet-width) {
+    position: relative;
+
+    width: 428px;
+    height: 6px;
+
+    border: none;
+    background-color: $mostly-grey;
+  }
+}
+
+.control-slider__toogle {
+  position: relative;
+
+  width: 35px;
+  height: 6px;
+  margin: 4px 0 0 6px;
+
+  background-color: $green;
+  border-radius: 6px;
+  cursor: pointer;
+
+  @media (min-width: $tablet-width) {
+    top: -15px;
+    left: 50%;
+
+    width: 8px;
+    height: 8px;
+    margin: 0;
+
+    border-radius: 50%;
+    border: 13px solid $white;
+    box-shadow: 0 1px 3px rgba($black, 0.15);
+  }
+
+  &:active .control-slider__border {
+    border-color: $green;
+  }
+}
+
+.control-slider__border {
+  @media (min-width: $tablet-width) {
+    position: absolute;
+    top: -13px;
+    right: -13px;
+
+    width: 33px;
+    height: 33px;
+
+    border-radius: 50%;
+    border: 1px solid $medium-grey;
+  }
 }

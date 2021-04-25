@@ -1,14 +1,59 @@
 .socials {
   @include reset-list;
+  margin-bottom: 26px;
+  padding: 20px 0;
 
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
+
+  border-top: 1px solid $less-grey;
+  border-bottom: 1px solid $less-grey;
+
+  @media (min-width: $tablet-width) {
+    margin: 0;
+
+    border: none;
+  }
 }
 
 .socials__item {
-  width: 20px;
-  height: 20px;
-  margin: 0 20px 0 0;
-  background-color: $red;
+  margin: 0 15px;
+
+  @media (min-width: $tablet-width) {
+    margin: 0 5px;
+
+    &:nth-child(3) {
+      margin: 0;
+    }
+  }
+}
+
+.socials__link {
+  &:hover path,
+  &:focus path {
+    fill: $green;
+  }
+
+  &:active path {
+    fill: rgba($green, 0.3);
+  }
+
+  &--fb:hover path,
+  &--fb:focus path {
+    fill: none;
+    stroke: $green;
+  }
+
+  &--fb:active path {
+    fill: none;
+    stroke: rgba($green, 0.5);
+  }
+}
+
+.socials__link svg {
+  @media (min-width: $tablet-width) {
+    width: 35px;
+    height: 30px;
+  }
 }

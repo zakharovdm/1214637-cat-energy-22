@@ -1,10 +1,8 @@
 .product {
-  width: 280px;
   display: grid;
   grid-template-columns: 140px 142px;
 
   @media (min-width: $tablet-width) {
-    width: 325px;
     padding-bottom: 40px;
     grid-template-columns: 250px;
     justify-content: center;
@@ -19,15 +17,15 @@
   }
 
   @media (min-width: $desktop-width) {
-    width: 245px;
     grid-template-columns: 180px;
   }
 }
 
 .product__inner {
-  grid-column: 1/-1;
+  grid-column: 2/-1;
 
   @media (min-width: $tablet-width) {
+    grid-column: 1/-1;
     grid-row: 2/3;
   }
 }

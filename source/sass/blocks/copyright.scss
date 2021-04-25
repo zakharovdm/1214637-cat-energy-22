@@ -1,8 +1,24 @@
 .copyright__link {
   display: flex;
   justify-content: space-between;
+  align-items: center;
+
+  &:hover path,
+  &:focus path {
+    fill: $green;
+  }
+
+  &:active path {
+    fill: rgba($green, 0.3);
+  }
+
+  &:active .copyright__text {
+    opacity: 0.3;
+  }
 
   @media (min-width: $tablet-width) {
-    justify-content: center;
+    width: 150px;
+
+    justify-content: space-between;
   }
 }
