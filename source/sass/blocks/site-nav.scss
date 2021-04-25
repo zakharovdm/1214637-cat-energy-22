@@ -148,7 +148,9 @@
         background: $green;
       }
     }
+  }
 
+  &--main {
     @media (min-width: $desktop-width) {
       &::after {
         background: $white;
