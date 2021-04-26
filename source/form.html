@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
   </head>
   <body class="page-body">
-    <header class="site-header site-header--form">
+    <header class="site-header site-header--internal">
       <nav class="site-header__nav site-nav site-nav--closed site-nav--nojs">
         <div class="site-nav__wrap">
           <div class="site-nav__inner container">
@@ -24,7 +24,7 @@
             <li class="site-nav__item">
               <a class="site-nav__link" href="catalog.html">Каталог продукции</a>
             </li>
-            <li class="site-nav__item site-nav__item--current site-nav__item--form">
+            <li class="site-nav__item site-nav__item--current site-nav__item--internal">
               <a class="site-nav__link" href="#">Подбор программы</a>
             </li>
           </ul>
@@ -32,38 +32,46 @@
       </nav>
     </header>
 
-    <main class="site-main container container--form">
-      <h1 class="site-main__title">Подбор программы</h1>
-      <p class="site-main__text">Заполните анкету, и мы подберем программу питания для вашего кота</p>
+    <main class="site-main">
+      <div class="container container--form">
+        <h1 class="site-main__title">Подбор программы</h1>
+        <p class="site-main__text">Заполните анкету, и мы подберем программу питания для вашего кота</p>
+      </div>
       <form class="form" action="https://echo.htmlacademy.ru" method="post" target="_blank">
-        <div class="form__wrapper">
+        <div class="form__wrapper form__wrapping">
           <fieldset class="form__fields">
-            <div class="form__inner">
-              <label class="form__label" for="name-field">ИМЯ:*</label>
-              <input class="form__input" type="text" name="name" id="name-field" placeholder="барсик">
-            </div>
-            <div class="form__inner">
-              <label class="form__label" for="weight-field">Вес (кг):*</label>
-              <input class="form__input" type="number" name="weight" id="weight-field" placeholder="7">
-            </div>
-            <div class="form__inner">
-              <label class="form__label" for="age-field">Возраст (лет):</label>
-              <input class="form__input" type="number" name="age" id="age-field" placeholder="7">
+            <div class="form__container">
+              <div class="form__inner">
+                <label class="form__label" for="name-field">ИМЯ:*</label>
+                <input class="form__input" type="text" name="name" id="name-field" placeholder="барсик">
+              </div>
+              <div class="form__inner">
+                <label class="form__label" for="weight-field">Вес (кг):*</label>
+                <input class="form__input" type="number" name="weight" id="weight-field" placeholder="7">
+              </div>
+              <div class="form__inner">
+                <label class="form__label" for="age-field">Возраст (лет):</label>
+                <input class="form__input" type="number" name="age" id="age-field" placeholder="7">
+              </div>
             </div>
           </fieldset>
 
           <fieldset class="form__fields">
-            <div class="form__inner">
-              <input class="form__radio" type="radio" name="program" id="slimming" value="slim" checked>
-              <label class="form__label form__label--option" for="slimming">похудение</label>
-            </div>
-            <div class="form__inner">
-              <input class="form__radio" type="radio" name="program" id="muscular" value="muscular">
-              <label class="form__label form__label--option" for="muscular">Набор массы</label>
-            </div>
-            <div class="form__inner">
-              <input class="form__radio" type="radio" name="program" id="advice" value="advice">
-              <label class="form__label form__label--option" for="advice" >Не знаю (Нужен ваш совет)</label>
+            <div class="form__container">
+              <div class="form__block">
+                <div class="form__inner">
+                  <input class="form__radio visually-hidden" type="radio" name="program" id="slimming" value="slim" checked>
+                  <label class="form__label form__label--option" for="slimming">похудение</label>
+                </div>
+                <div class="form__inner">
+                  <input class="form__radio visually-hidden" type="radio" name="program" id="muscular" value="muscular">
+                  <label class="form__label form__label--option" for="muscular">Набор массы</label>
+                </div>
+                <div class="form__inner">
+                  <input class="form__radio visually-hidden" type="radio" name="program" id="advice" value="advice">
+                  <label class="form__label form__label--option" for="advice" >Не знаю (Нужен ваш совет)</label>
+                </div>
+              </div>
             </div>
           </fieldset>
         </div>

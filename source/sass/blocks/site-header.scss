@@ -6,10 +6,14 @@
     grid-column: 1/-1;
   }
 
-  &--form {
+  &--internal {
+    margin: 0 0 27px 0;
+
     border-bottom: 1px solid $less-grey;
 
     @media (min-width: $tablet-width) {
+      margin: 0;
+
       border: none;
     }
   }

@@ -99,7 +99,7 @@
   }
 
   @media (min-width: $desktop-width) {
-    margin: 69px 0 42px 0;
+    margin: 69px 0 77px 0;
   }
 }
 
@@ -126,7 +126,7 @@
     border-bottom: 1px solid $less-light-grey;
   }
 
-  &--form:last-child {
+  &--internal:last-child {
     border-bottom: none;
   }
 
