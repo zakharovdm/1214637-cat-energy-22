@@ -126,6 +126,10 @@
     border-bottom: 1px solid $less-light-grey;
   }
 
+  &--form:last-child {
+    border-bottom: none;
+  }
+
   @media (min-width: $tablet-width) {
     border: none;
 
