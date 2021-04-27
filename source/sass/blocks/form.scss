@@ -17,11 +17,9 @@
 .form__container {
   width: 280px;
   margin: 0 auto;
-  padding: 0 20px;
 
   @media (min-width: $tablet-width) {
     width: 630px;
-    padding: 0 30px;
   }
 
   @media (min-width: $desktop-width) {
@@ -49,7 +47,7 @@
 
   &:nth-child(2) {
     padding: 28px 0 6px;
-    margin-bottom: 50px;
+    margin-bottom: 27px;
     align-self: center;
 
     border-top: 1px solid $less-grey;
@@ -80,8 +78,10 @@
 }
 
 .form__block {
+  padding-left: 45px;
+
   @media (min-width: $tablet-width) {
-    padding: 32px 10px 18px 28px;
+    padding: 30px 10px 5px 88px;
 
     border: 1px solid $lighted-grey;
   }
@@ -141,11 +141,16 @@
 }
 
 .form__label {
+  position: relative;
+  display: block;
   padding: 0 13px 0 0;
 
   font-size: 16px;
   text-transform: uppercase;
   color: $dark-grey;
+
+  cursor: pointer;
+  user-select: none;
 
   @media (min-width: $tablet-width) {
     font-size: 20px;
@@ -153,10 +158,29 @@
   }
 
   &--option {
-    padding: 0 16px;
-    margin-bottom: 18px;
+    margin-bottom: 23px;
 
     color: $darked-grey;
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: -45px;
+      top: -6px;
+
+      width: 28px;
+      height: 28px;
+
+      border: 1px solid $medium-grey;
+      border-radius: 50%;
+
+      @media (min-width: $tablet-width) {
+        left: -60px;
+
+        width: 38px;
+        height: 38px;
+      }
+    }
   }
 
   &--checkbox {
@@ -218,6 +242,39 @@
 
   &--error {
     border-color: $red;
+  }
+}
+
+.form__radio {
+  &:checked + .form__label--option::after {
+    content: "";
+    position: absolute;
+    top: 2px;
+    left: -36px;
+    width: 13px;
+    height: 13px;
+    background-color: $green;
+    border-radius: 50%;
+
+    @media (min-width: $tablet-width) {
+      top: 4px;
+      left: -49px;
+
+      width: 18px;
+      height: 18px;
+    }
+  }
+
+  &:hover:not(:disabled) + .form__label--option::before,
+  &:focus:not(:disabled) + .form__label--option::before,
+  &:checked:hover:not(:disabled) + .form__label--option::before,
+  &:checked:focus:not(:disabled) + .form__label--option::before {
+    border-color: $gray;
+  }
+
+  &:disabled:checked + .form__label--option,
+  &:disabled + .form__label--option {
+    opacity: 0.3;
   }
 }
 
