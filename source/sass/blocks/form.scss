@@ -76,44 +76,45 @@
     margin: 0 0 34px;
   }
 
-  &::after {
+  .container {
+    position: relative;
+  }
+
+  .container::after {
     content: "";
     position: absolute;
     top: 15px;
-    right: 0;
+    width: 100vw;
+    left: 20px;
     height: 2px;
     background-color: $green;
-  }
 
-  &--contacts::after {
-    width: 30%;
-  }
-
-  &--comments::after {
-    width: 50%;
-  }
-
-  &--additionally::after {
-    width: 45%;
+    @media (min-width: $tablet-width) {
+      left: 30px;
+    }
   }
 
   @media (min-width: $tablet-width) {
     margin-bottom: 35px;
 
-    &::after {
+    .container::before {
+      content: "";
+      position: absolute;
+      top: 20px;
+      width: 100vw;
+      right: 690px;
+      height: 2px;
+      background-color: $green;
+    }
+
+    .container::after {
       top: 20px;
     }
+  }
 
-    &--contacts::after {
-      width: 20%;
-    }
-
-    &--comments::after {
-      width: 60%;
-    }
-
-    &--additionally::after {
-      width: 57%;
+  @media (min-width: $desktop-width) {
+    .container::before {
+      right: 1280px;
     }
   }
 }
@@ -165,6 +166,7 @@
 
 .form__wrap-checkbox {
   padding-left: 46px;
+  margin-top: 10px;
 
   @media (min-width: $tablet-width) {
     width: 530px;
@@ -371,18 +373,40 @@
 }
 
 .form__title {
-  width: 210px;
+  position: relative;
+  z-index: 1;
+
+  width: 205px;
   padding: 0 0 35px;
 
   font-size: 24px;
   line-height: 26px;
 
+  background-color: $white;
+
+  &--comment {
+    width: 140px;
+  }
+
+  &--additionaly {
+    width: 160px;
+    padding: 0 0 25px;
+  }
+
   @media (min-width: $tablet-width) {
-    width: auto;
+    width: 555px;
     padding: 0 0 76px;
 
     font-size: 36px;
     line-height: 36px;
+
+    &--comment {
+      width: 220px;
+    }
+
+    &--additionaly {
+      width: 250px;
+    }
   }
 }
 
