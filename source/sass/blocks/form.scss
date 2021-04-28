@@ -47,7 +47,7 @@
 
   &:nth-child(2) {
     padding: 28px 0 6px;
-    margin-bottom: 27px;
+    margin-bottom: 26px;
     align-self: center;
 
     border-top: 1px solid $less-grey;
@@ -62,18 +62,59 @@
       padding: 0;
     }
   }
+}
 
-  &:nth-child(3),
-  &:nth-child(4) {
-    margin-bottom: 10px;
+.form__fieldset {
+  position: relative;
 
-    @media (min-width: $tablet-width) {
-      margin-bottom: 35px;
-    }
+  padding: 0;
+  margin: 0 0 10px;
+
+  border: 0;
+
+  &--additionally {
+    margin: 0 0 34px;
   }
 
-  &:nth-child(5) {
-    margin-bottom: 34px;
+  &::after {
+    content: "";
+    position: absolute;
+    top: 15px;
+    right: 0;
+    height: 2px;
+    background-color: $green;
+  }
+
+  &--contacts::after {
+    width: 30%;
+  }
+
+  &--comments::after {
+    width: 50%;
+  }
+
+  &--additionally::after {
+    width: 45%;
+  }
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 35px;
+
+    &::after {
+      top: 20px;
+    }
+
+    &--contacts::after {
+      width: 20%;
+    }
+
+    &--comments::after {
+      width: 60%;
+    }
+
+    &--additionally::after {
+      width: 57%;
+    }
   }
 }
 
@@ -123,6 +164,8 @@
 }
 
 .form__wrap-checkbox {
+  padding-left: 46px;
+
   @media (min-width: $tablet-width) {
     width: 530px;
     display: grid;
@@ -184,10 +227,28 @@
   }
 
   &--checkbox {
-    padding: 0 18px;
-    margin-bottom: 20px;
+    margin-bottom: 25px;
 
     color: $black;
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: -45px;
+      top: -6px;
+
+      width: 30px;
+      height: 30px;
+
+      border: 1px solid $medium-grey;
+
+      @media (min-width: $tablet-width) {
+        left: -60px;
+
+        width: 40px;
+        height: 40px;
+      }
+    }
   }
 }
 
@@ -274,6 +335,37 @@
 
   &:disabled:checked + .form__label--option,
   &:disabled + .form__label--option {
+    opacity: 0.3;
+  }
+}
+
+.form__checkbox {
+  &:checked + .form__label--checkbox::after {
+    content: "";
+    position: absolute;
+    top: 3px;
+    left: -38px;
+
+    width: 18px;
+    height: 14px;
+
+    background: url("../img/icons/check.svg") no-repeat;
+
+    @media (min-width: $tablet-width) {
+      top: 8px;
+      left: -47px;
+    }
+  }
+
+  &:hover:not(:disabled) + .form__label--checkbox::before,
+  &:focus:not(:disabled) + .form__label--checkbox::before,
+  &:checked:hover:not(:disabled) + .form__label--checkbox::before,
+  &:checked:focus:not(:disabled) + .form__label--checkbox::before {
+    border-color: $gray;
+  }
+
+  &:disabled:checked + .form__label--checkbox,
+  &:disabled + .form__label--checkbox {
     opacity: 0.3;
   }
 }
