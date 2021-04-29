@@ -1,8 +1,30 @@
 .form__wrapper {
   @media (min-width: $desktop-width) {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 570px 570px;
     grid-gap: 80px;
+  }
+}
+
+.form__wrapping {
+  @media (min-width: $desktop-width) {
+    width: 1225px;
+    padding: 0 20px;
+    margin: 0 auto;
+  }
+}
+
+.form__container {
+  width: 280px;
+  margin: 0 auto;
+
+  @media (min-width: $tablet-width) {
+    width: 630px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 100%;
+    padding: 0;
   }
 }
 
@@ -12,30 +34,104 @@
   border: 0;
 
   &:first-child {
-    margin-bottom: 33px;
-  }
-
-  &:nth-child(2) {
-    margin-bottom: 50px;
-
-    align-self: center;
-  }
-
-  &:nth-child(3),
-  &:nth-child(4) {
-    margin-bottom: 10px;
+    margin-bottom: 24px;
 
     @media (min-width: $tablet-width) {
-      margin-bottom: 35px;
+      margin-bottom: 44px;
+    }
+
+    @media (min-width: $desktop-width) {
+      margin-bottom: 69px;
     }
   }
 
-  &:nth-child(5) {
-    margin-bottom: 34px;
+  &:nth-child(2) {
+    padding: 28px 0 6px;
+    margin-bottom: 26px;
+    align-self: center;
+
+    border-top: 1px solid $less-grey;
+    border-bottom: 1px solid $less-grey;
+
+    @media (min-width: $tablet-width) {
+      border: none;
+    }
+
+    @media (min-width: $desktop-width) {
+      align-self: start;
+      padding: 0;
+    }
+  }
+}
+
+.form__fieldset {
+  position: relative;
+
+  padding: 0;
+  margin: 0 0 10px;
+
+  border: 0;
+
+  &--additionally {
+    margin: 0 0 34px;
+  }
+
+  .container {
+    position: relative;
+  }
+
+  .container::after {
+    content: "";
+    position: absolute;
+    top: 15px;
+    width: 100vw;
+    left: 20px;
+    height: 2px;
+    background-color: $green;
+
+    @media (min-width: $tablet-width) {
+      left: 30px;
+    }
+  }
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 35px;
+
+    .container::before {
+      content: "";
+      position: absolute;
+      top: 20px;
+      width: 100vw;
+      right: 690px;
+      height: 2px;
+      background-color: $green;
+    }
+
+    .container::after {
+      top: 20px;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    .container::before {
+      right: 1280px;
+    }
+  }
+}
+
+.form__block {
+  padding-left: 45px;
+
+  @media (min-width: $tablet-width) {
+    padding: 30px 10px 5px 88px;
+
+    border: 1px solid $lighted-grey;
   }
 }
 
 .form__inner {
+  position: relative;
+
   display: flex;
   align-items: baseline;
 
@@ -71,6 +167,9 @@
 }
 
 .form__wrap-checkbox {
+  padding-left: 46px;
+  margin-top: 10px;
+
   @media (min-width: $tablet-width) {
     width: 530px;
     display: grid;
@@ -89,11 +188,16 @@
 }
 
 .form__label {
+  position: relative;
+  display: block;
   padding: 0 13px 0 0;
 
   font-size: 16px;
   text-transform: uppercase;
   color: $dark-grey;
+
+  cursor: pointer;
+  user-select: none;
 
   @media (min-width: $tablet-width) {
     font-size: 20px;
@@ -101,17 +205,54 @@
   }
 
   &--option {
-    padding: 0 16px;
-    margin-bottom: 18px;
+    margin-bottom: 23px;
 
     color: $darked-grey;
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: -45px;
+      top: -6px;
+
+      width: 28px;
+      height: 28px;
+
+      border: 1px solid $medium-grey;
+      border-radius: 50%;
+
+      @media (min-width: $tablet-width) {
+        left: -60px;
+
+        width: 38px;
+        height: 38px;
+      }
+    }
   }
 
   &--checkbox {
-    padding: 0 18px;
-    margin-bottom: 20px;
+    margin-bottom: 25px;
 
     color: $black;
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: -45px;
+      top: -6px;
+
+      width: 30px;
+      height: 30px;
+
+      border: 1px solid $medium-grey;
+
+      @media (min-width: $tablet-width) {
+        left: -60px;
+
+        width: 40px;
+        height: 40px;
+      }
+    }
   }
 }
 
@@ -124,6 +265,7 @@
 
   @media (min-width: $tablet-width) {
     padding: 10px 15px 10px;
+    margin: 0 0 20px;
 
     font-size: 20px;
     line-height: 30px;
@@ -148,6 +290,11 @@
     border-color: $dark-grey;
   }
 
+  &:focus + .form__input-logo path,
+  &:focus + .form__input-logo line {
+    stroke: $green;
+  }
+
   &--comment {
     width: 255px;
     min-height: 125px;
@@ -165,22 +312,123 @@
 
   &--error {
     border-color: $red;
+
+    & + .form__input-logo path,
+    & + .form__input-logo line {
+      stroke: $red;
+    }
+  }
+}
+
+.form__input-logo {
+  position: absolute;
+  top: 13px;
+  right: 15px;
+
+  @media (min-width: $tablet-width) {
+    top: 17px;
+  }
+}
+
+.form__radio {
+  &:checked + .form__label--option::after {
+    content: "";
+    position: absolute;
+    top: 2px;
+    left: -36px;
+    width: 13px;
+    height: 13px;
+    background-color: $green;
+    border-radius: 50%;
+
+    @media (min-width: $tablet-width) {
+      top: 4px;
+      left: -49px;
+
+      width: 18px;
+      height: 18px;
+    }
+  }
+
+  &:hover:not(:disabled) + .form__label--option::before,
+  &:focus:not(:disabled) + .form__label--option::before,
+  &:checked:hover:not(:disabled) + .form__label--option::before,
+  &:checked:focus:not(:disabled) + .form__label--option::before {
+    border-color: $gray;
+  }
+
+  &:disabled:checked + .form__label--option,
+  &:disabled + .form__label--option {
+    opacity: 0.3;
+  }
+}
+
+.form__checkbox {
+  &:checked + .form__label--checkbox::after {
+    content: "";
+    position: absolute;
+    top: 3px;
+    left: -38px;
+
+    width: 18px;
+    height: 14px;
+
+    background: url("../img/icons/check.svg") no-repeat;
+
+    @media (min-width: $tablet-width) {
+      top: 8px;
+      left: -47px;
+    }
+  }
+
+  &:hover:not(:disabled) + .form__label--checkbox::before,
+  &:focus:not(:disabled) + .form__label--checkbox::before,
+  &:checked:hover:not(:disabled) + .form__label--checkbox::before,
+  &:checked:focus:not(:disabled) + .form__label--checkbox::before {
+    border-color: $gray;
+  }
+
+  &:disabled:checked + .form__label--checkbox,
+  &:disabled + .form__label--checkbox {
+    opacity: 0.3;
   }
 }
 
 .form__title {
-  width: 210px;
+  position: relative;
+  z-index: 1;
+
+  width: 205px;
   padding: 0 0 35px;
 
   font-size: 24px;
   line-height: 26px;
 
+  background-color: $white;
+
+  &--comment {
+    width: 140px;
+  }
+
+  &--additionaly {
+    width: 160px;
+    padding: 0 0 25px;
+  }
+
   @media (min-width: $tablet-width) {
-    width: auto;
+    width: 555px;
     padding: 0 0 76px;
 
     font-size: 36px;
     line-height: 36px;
+
+    &--comment {
+      width: 220px;
+    }
+
+    &--additionaly {
+      width: 250px;
+    }
   }
 }
 
