@@ -130,6 +130,8 @@
 }
 
 .form__inner {
+  position: relative;
+
   display: flex;
   align-items: baseline;
 
@@ -288,6 +290,11 @@
     border-color: $dark-grey;
   }
 
+  &:focus + .form__input-logo path,
+  &:focus + .form__input-logo line {
+    stroke: $green;
+  }
+
   &--comment {
     width: 255px;
     min-height: 125px;
@@ -305,6 +312,21 @@
 
   &--error {
     border-color: $red;
+
+    & + .form__input-logo path,
+    & + .form__input-logo line {
+      stroke: $red;
+    }
+  }
+}
+
+.form__input-logo {
+  position: absolute;
+  top: 13px;
+  right: 15px;
+
+  @media (min-width: $tablet-width) {
+    top: 17px;
   }
 }
 
