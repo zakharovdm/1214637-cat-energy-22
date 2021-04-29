@@ -261,6 +261,9 @@
   margin: 0 0 13px;
   flex-grow: 1;
 
+  font-size: 16px;
+  line-height: 18px;
+
   border: 1px solid $lighted-grey;
 
   @media (min-width: $tablet-width) {
@@ -300,6 +303,8 @@
     min-height: 125px;
     padding: 10px 10px 13px 13px;
 
+    resize: none;
+
     @media (min-width: $tablet-width) {
       width: 600px;
       padding-left: 19px;
@@ -317,6 +322,10 @@
     & + .form__input-logo line {
       stroke: $red;
     }
+  }
+
+  &[type="number"] {
+    appearance: textfield;
   }
 }
 
