@@ -1,6 +1,6 @@
 .products-list {
   @include reset-list;
-  margin-bottom: 50px;
+  margin-bottom: 25px;
   display: grid;
   grid-template-columns: 1fr;
   grid-gap: 25px;
