@@ -12,6 +12,7 @@
   @media (min-width: $tablet-width) {
     width: 708px;
     min-height: 200px;
+    margin: 0 0 76px;
     justify-content: center;
     align-items: flex-end;
     background: url("../img/gift-tablet.jpg") no-repeat;
@@ -20,13 +21,15 @@
   @media (min-width: $desktop-width) {
     width: 245px;
     min-height: 289px;
-    margin: 0;
+    margin: 0 0 86px;
     justify-content: flex-end;
     background: url("../img/gift-desktop.jpg") no-repeat;
   }
 }
 
 .offer__text {
+  position: relative;
+
   width: 150px;
   margin: 0 auto;
   padding-bottom: 45px;
@@ -37,12 +40,29 @@
   color: $white;
   text-align: center;
 
+  &--gift::after {
+    content: "";
+    position: absolute;
+    top: -125px;
+    left: 35px;
+
+    width: 80px;
+    height: 80px;
+
+    background: url("../img/icons/icon_gift.svg") no-repeat;
+  }
+
   @media (min-width: $tablet-width) {
     width: 180px;
-    margin: 0 125px 0 0;
+    margin: 0 105px 0 0;
     padding-bottom: 0;
 
     text-align: left;
+
+    &--gift::after {
+      top: -10px;
+      left: -345px;
+    }
   }
 
   @media (min-width: $desktop-width) {
@@ -50,5 +70,10 @@
     padding-bottom: 45px;
 
     text-align: center;
+
+    &--gift::after {
+      top: -125px;
+      left: 50px;
+    }
   }
 }

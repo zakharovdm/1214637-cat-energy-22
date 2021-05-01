@@ -1,5 +1,7 @@
 .additional-goods {
-  margin-bottom: 85px;
+  @media (min-width: $desktop-width) {
+    margin-bottom: 86px;
+  }
 
   .container {
     position: relative;
@@ -59,7 +61,7 @@
   }
 
   @media (min-width: $desktop-width) {
-    margin-left: 0;
+    margin: 0 0 81px 0;
   }
 }
 
