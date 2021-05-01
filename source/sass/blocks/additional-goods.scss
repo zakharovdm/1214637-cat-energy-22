@@ -1,8 +1,4 @@
 .additional-goods {
-  @media (min-width: $desktop-width) {
-    margin-bottom: 86px;
-  }
-
   .container {
     position: relative;
   }
@@ -71,7 +67,7 @@
 
   @media (min-width: $tablet-width) {
     display: grid;
-    grid-template-columns: 706px;
+    grid-template-columns: 708px;
     grid-gap: 28px;
     width: 706px;
     padding-bottom: 28px;
@@ -84,6 +80,8 @@
     grid-template-columns: 895px;
     justify-content: start;
     grid-gap: 0;
+    width: 100%;
+    margin-bottom: 58px;
 
     border: none;
   }
@@ -93,7 +91,6 @@
   @media (min-width: $desktop-width) {
     display: grid;
     grid-template-columns: 895px 245px;
-    grid-template-rows: 288px;
     grid-gap: 80px;
   }
 }
