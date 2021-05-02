@@ -1,11 +1,20 @@
 .product {
   display: grid;
   grid-template-columns: 140px 142px;
+  justify-content: center;
+  padding-top: 19px;
+
+  border-top: 1px solid $very-light-grey;
+
+  &--show {
+    padding-bottom: 25px;
+
+    border-bottom: 1px solid $very-light-grey;
+  }
 
   @media (min-width: $tablet-width) {
     padding-bottom: 40px;
     grid-template-columns: 250px;
-    justify-content: center;
     background-color: $grey;
 
     &--show {
@@ -23,6 +32,10 @@
 
 .product__inner {
   grid-column: 2/-1;
+
+  &--show {
+    grid-column: 1/-1;
+  }
 
   @media (min-width: $tablet-width) {
     grid-column: 1/-1;
@@ -58,6 +71,8 @@
 }
 
 .product__show {
+  position: relative;
+
   margin: 55px 0 10px 0;
 
   font-size: 16px;
@@ -66,6 +81,18 @@
   text-transform: uppercase;
   text-align: center;
 
+  &::before {
+    content: "";
+    position: absolute;
+    top: -50px;
+    left: 125px;
+
+    width: 30px;
+    height: 30px;
+
+    background: url("../img/icons/icon-plus.svg") no-repeat;
+  }
+
   @media (min-width: $tablet-width) {
     width: 140px;
     padding-bottom: 23px;
@@ -73,6 +100,16 @@
 
     font-size: 20px;
     line-height: 22px;
+
+    &::before {
+      top: -90px;
+      left: 40px;
+
+      width: 60px;
+      height: 60px;
+
+      background: url("../img/icons/icon-plus_tablet.svg") no-repeat;
+    }
   }
 }
 
