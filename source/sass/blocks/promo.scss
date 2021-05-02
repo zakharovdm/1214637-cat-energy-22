@@ -20,8 +20,9 @@
   background-color: darken($green, 25%);
 
   @media (min-resolution: 2dppx) {
-    background: url("../img/green-layer@2x.png"), url("../img/background-promo-mobile@2x.jpg");
+    background: url("../img/green-layer@2x.png"), url("../img/background-promo-mobile@2x.jpg") 50% 50% no-repeat;
     background-size: 320px auto;
+    background-color: darken($green, 25%);
   }
 
   @media (min-width: $tablet-width) {
