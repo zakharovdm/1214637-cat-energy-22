@@ -17,8 +17,12 @@
           <div class="site-nav__wrap">
             <div class="site-nav__inner container">
               <a class="site-nav__logo">
-                <img src="img/logo-mobile.svg" width="34" height="38" alt="">
-                <img src="img/logo-mobile-text.svg" width="101" height="18" alt="Кэт энерджи">
+                <picture class="site-nav__picture">
+                  <source media="(min-width: 1440px)" width="202" height="59" srcset="img/logo-desktop.svg">
+                  <source media="(min-width: 768px)" width="174" height="52" srcset="img/logo-tablet.svg">
+                  <img src="img/logo-mobile.svg" width="34" height="38" alt="">
+                </picture>
+                <img class="site-nav__logo-text" src="img/logo-mobile-text.svg" width="101" height="18" alt="Кэт энерджи">
               </a>
               <button class="site-nav__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
             </div>

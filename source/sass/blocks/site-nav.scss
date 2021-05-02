@@ -73,9 +73,18 @@
 
 .site-nav__logo {
   width: 190px;
-  margin: 12px 0 16px;
+  margin: 12px 0 14px;
   display: flex;
   justify-content: space-between;
+
+  &:hover,
+  &:focus {
+    opacity: 0.8;
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
 
   @media (min-width: $tablet-width) {
     margin: 24px 0 0;
@@ -85,6 +94,12 @@
   @media (min-width: $desktop-width) {
     margin: 53px 0 0;
     display: block;
+  }
+}
+
+.site-nav__logo-text {
+  @media (min-width: $tablet-width) {
+    display: none;
   }
 }
 
