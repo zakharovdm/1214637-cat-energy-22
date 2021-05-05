@@ -142,9 +142,16 @@
 }
 
 .site-footer__map {
+  position: relative;
+
   min-width: 320px;
   height: 362px;
   margin-bottom: 39px;
+
+  & iframe {
+    position: relative;
+    z-index: 1;
+  }
 
   @media (min-width: $tablet-width) {
     height: 400px;
@@ -155,4 +162,14 @@
     grid-column: 1/-1;
     grid-row: 1/-1;
   }
+}
+
+.site-footer__map-img {
+  display: block;
+  margin: 0 auto;
+
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
 }
