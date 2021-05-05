@@ -164,9 +164,10 @@
   display: block;
   margin: 0 auto;
 
-  transform: translateY(-365px);
+  position: absolute;
+  top: -365px;
 
   @media (min-width: $tablet-width) {
-    transform: translateY(-403px);
+    top: -403px;
   }
 }
