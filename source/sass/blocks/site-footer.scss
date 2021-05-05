@@ -140,6 +140,8 @@
 }
 
 .site-footer__map {
+  position: relative;
+
   min-width: 320px;
   height: 362px;
   margin-bottom: 39px;
@@ -165,9 +167,7 @@
   margin: 0 auto;
 
   position: absolute;
-  top: -365px;
-
-  @media (min-width: $tablet-width) {
-    top: -403px;
-  }
+  top: 0;
+  left: 0;
+  right: 0;
 }
