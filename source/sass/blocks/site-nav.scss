@@ -67,7 +67,11 @@
   }
 
   @media (min-width: $desktop-width) {
-    width: 570px;
+    width: 660px;
+
+    &--form {
+      width: 745px;
+    }
   }
 }
 
