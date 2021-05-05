@@ -6,6 +6,12 @@
 
   @media (min-width: $tablet-width) {
     width: 565px;
+
+    transform: translateY(-170px);
+  }
+
+  @media (min-width: $desktop-width) {
+    transform: translate(30px, -170px);
   }
 }
 
