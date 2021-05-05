@@ -9,7 +9,8 @@
     margin-bottom: 70px;
     display: grid;
     grid-template-columns: 324px 324px;
-    grid-gap: 60px;
+    grid-column-gap: 60px;
+    grid-row-gap: 140px;
     justify-content: center;
   }
 
