@@ -17,8 +17,21 @@
   }
 
   @media (min-width: $tablet-width) {
-    width: 150px;
+    width: 164px;
 
     justify-content: space-between;
   }
 }
+
+.copyright__text {
+  margin: 0;
+
+  font-family: "Arial", sans-serif;
+  font-size: 16px;
+  color: $dark-grey;
+
+  &:active {
+    color: rgba($dark-grey, 0.3);
+  }
+}
+

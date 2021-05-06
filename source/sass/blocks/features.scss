@@ -1,6 +1,6 @@
 .features__title {
   margin: 0;
-  padding: 0 0 38px;
+  padding: 0 0 40px;
 
   font-weight: 400;
   font-size: 36px;
@@ -21,21 +21,22 @@
   display: grid;
   grid-template-rows: repeat(4, 1fr);
   justify-content: end;
-  grid-gap: 20px;
+  grid-gap: 26px;
 
   @media (min-width: $tablet-width) {
-    margin-bottom: 150px;
+    margin-bottom: 146px;
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr;
-    grid-gap: 135px;
+    grid-column-gap: 60px;
+    grid-row-gap: 135px;
   }
 
   @media (min-width: $desktop-width) {
     margin-bottom: 260px;
     grid-template-columns: repeat(4, max-content);
     grid-template-rows: max-content;
-    grid-gap: 80px;
+    grid-gap: 74px;
   }
 }
 
@@ -46,6 +47,7 @@
     content: "";
     position: absolute;
     left: -80px;
+    top: -2px;
 
     width: 60px;
     height: 60px;
@@ -54,6 +56,7 @@
 
     @media (min-width: $tablet-width) {
       left: 0;
+      top: 0;
 
       width: 80px;
       height: 80px;
@@ -106,7 +109,7 @@
     background: url("../img/icons/icon_eat.svg") no-repeat;
 
     @media (min-width: $tablet-width) {
-      left: 26px;
+      left: 28px;
       top: 25px;
     }
   }
@@ -115,7 +118,7 @@
     content: "";
     position: absolute;
     left: -65px;
-    top: 13px;
+    top: 11px;
 
     width: 30px;
     height: 32px;
@@ -124,7 +127,7 @@
 
     @media (min-width: $tablet-width) {
       left: 24px;
-      top: 24px;
+      top: 23px;
     }
   }
 }
@@ -138,7 +141,7 @@
 
   @media (min-width: $tablet-width) {
     width: 250px;
-    margin-top: 110px;
+    margin-top: 111px;
 
     font-size: 16px;
     line-height: 24px;

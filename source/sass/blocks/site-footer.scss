@@ -1,5 +1,4 @@
 .site-footer {
-  overflow: hidden;
   padding-bottom: 22px;
 
   background-color: $grey;
@@ -52,8 +51,8 @@
   padding: 28px 19px;
 
   @media (min-width: $tablet-width) {
-    width: 630px;
-    padding: 66px 72px 50px;
+    width: 626px;
+    padding: 66px 60px 57px;
   }
 
   @media (min-width: $desktop-width) {
@@ -67,13 +66,13 @@
   margin: 0;
 
   font-size: 16px;
-  line-height: 18px;
+  line-height: 21px;
   text-transform: uppercase;
   color: $almost-black;
 
   @media (min-width: $tablet-width) {
     font-size: 20px;
-    line-height: 21px;
+    line-height: 25px;
   }
 }
 
@@ -97,20 +96,16 @@
   }
 }
 
-.copyright__text {
-  margin: 0;
-
-  font-family: "Arial", sans-serif;
-  color: $dark-grey;
-
-  &:active {
-    color: rgba($dark-grey, 0.3);
+.site-footer__town {
+  @media (min-width: $tablet-width) {
+    display: block;
+    margin-top: 19px;
   }
 }
 
 .site-footer__logo {
   display: block;
-  margin-bottom: 32px;
+  margin-bottom: 28px;
 
   text-align: center;
 
@@ -145,7 +140,7 @@
 
   min-width: 320px;
   height: 362px;
-  margin-bottom: 39px;
+  margin-bottom: 35px;
 
   & iframe {
     position: relative;
