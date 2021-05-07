@@ -12,8 +12,8 @@
 }
 
 .promo__wrapper {
-  min-height: 302px;
   min-width: 320px;
+  padding-bottom: 164px;
 
   color: $white;
   text-align: center;
@@ -28,7 +28,7 @@
   }
 
   @media (min-width: $tablet-width) {
-    min-height: 0;
+    padding-bottom: 0;
 
     background: transparent;
   }
@@ -90,6 +90,7 @@
   }
 
   @media (min-width: $desktop-width) {
+    width: 450px;
     padding-bottom: 50px;
   }
 }

@@ -116,6 +116,9 @@
   }
 
   @media (min-width: $desktop-width) {
+    position: relative;
+    z-index: 2;
+
     margin: 69px 0 77px 0;
   }
 }
