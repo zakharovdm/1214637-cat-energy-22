@@ -219,7 +219,7 @@
   }
 
   @media (min-width: $desktop-width) {
-    background: linear-gradient(to right, $grey 53%, $light-grey 53%);
+    background: linear-gradient(to right, $grey 55%, $light-grey 55%);
   }
 }
 
@@ -246,7 +246,7 @@
   margin-bottom: 28px;
 
   @media (min-width: $tablet-width) {
-    top: -180px;
+    top: -188px;
   }
 }
 
@@ -309,6 +309,8 @@
   }
 
   @media (min-width: $desktop-width) {
+    height: 535px;
+
     &--before {
       left: 11px;
     }

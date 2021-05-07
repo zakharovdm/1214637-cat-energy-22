@@ -17,10 +17,12 @@
 
 .site-footer__inner {
   @media (min-width: $desktop-width) {
+    position: relative;
+    z-index: 2;
+
     width: 1225px;
     grid-row: 1/-1;
     grid-column: 1/-1;
-    z-index: 1;
     justify-self: center;
     align-self: center;
   }
@@ -31,7 +33,7 @@
   background-color: $white;
 
   @media (min-width: $desktop-width) {
-    width: 520px;
+    width: 572px;
   }
 
   &--inner-page {
@@ -56,8 +58,8 @@
   }
 
   @media (min-width: $desktop-width) {
-    width: 400px;
-    padding: 66px 89px 60px 76px;
+    width: 412px;
+    padding: 64px 89px 58px 76px;
   }
 }
 
@@ -101,6 +103,10 @@
     display: block;
     margin-top: 19px;
   }
+
+  @media (min-width: $desktop-width) {
+    margin-top: 18px;
+  }
 }
 
 .site-footer__logo {
@@ -131,7 +137,7 @@
   }
 
   @media (min-width: $desktop-width) {
-    margin-top: 35px;
+    margin-top: 43px;
   }
 }
 

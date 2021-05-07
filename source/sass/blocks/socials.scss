@@ -16,6 +16,11 @@
 
     border: none;
   }
+
+  @media (min-width: $desktop-width) {
+    padding-top: 19px;
+    margin-left: 49px;
+  }
 }
 
 .socials__item {
