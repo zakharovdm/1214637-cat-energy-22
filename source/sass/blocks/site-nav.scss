@@ -50,11 +50,11 @@
     justify-content: space-between;
     width: 710px;
     margin: 0 auto;
-    padding: 0 30px;
+    padding: 0 20px;
   }
 
   @media (min-width: $desktop-width) {
-    width: 1225px;
+    width: 1222px;
     padding: 0 20px;
   }
 }
@@ -67,15 +67,24 @@
   }
 
   @media (min-width: $desktop-width) {
-    width: 570px;
+    width: 739px;
   }
 }
 
 .site-nav__logo {
   width: 190px;
-  margin: 12px 0 16px;
+  margin: 11px 0 14px;
   display: flex;
   justify-content: space-between;
+
+  &:hover,
+  &:focus {
+    opacity: 0.8;
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
 
   @media (min-width: $tablet-width) {
     margin: 24px 0 0;
@@ -83,8 +92,16 @@
   }
 
   @media (min-width: $desktop-width) {
+    width: 202px;
+
     margin: 53px 0 0;
     display: block;
+  }
+}
+
+.site-nav__logo-text {
+  @media (min-width: $tablet-width) {
+    display: none;
   }
 }
 
@@ -95,17 +112,20 @@
     margin: 42px 0 62px;
     display: grid;
     grid-template-columns: repeat(3, max-content);
-    grid-gap: 35px;
+    grid-gap: 36px;
   }
 
   @media (min-width: $desktop-width) {
+    position: relative;
+    z-index: 2;
+
     margin: 69px 0 77px 0;
   }
 }
 
 .site-nav__toggle {
   position: absolute;
-  top: 8px;
+  top: 12px;
   right: 20px;
   width: 25px;
   height: 20px;
@@ -158,6 +178,7 @@
     @media (min-width: $desktop-width) {
       &::after {
         background: $white;
+        bottom: -8px;
       }
     }
   }
@@ -165,7 +186,7 @@
 
 .site-nav__link {
   display: block;
-  padding: 22px 10px 24px;
+  padding: 22px 10px 23px;
 
   font-weight: 500;
   font-size: 20px;

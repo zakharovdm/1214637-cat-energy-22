@@ -2,6 +2,8 @@
   @media (min-width: $tablet-width) {
     display: grid;
     grid-template-rows: 1fr 500px;
+
+    margin-bottom: 58px;
   }
 
   @media (min-width: $desktop-width) {
@@ -10,8 +12,8 @@
 }
 
 .promo__wrapper {
-  min-height: 302px;
   min-width: 320px;
+  padding-bottom: 164px;
 
   color: $white;
   text-align: center;
@@ -19,8 +21,14 @@
   background: url("../img/green-layer.png"), url("../img/background-promo-mobile.jpg") 50% 50% no-repeat;
   background-color: darken($green, 25%);
 
+  @media (min-resolution: 2dppx) {
+    background: url("../img/green-layer@2x.png"), url("../img/background-promo-mobile@2x.jpg") 50% 50% no-repeat;
+    background-size: 320px auto;
+    background-color: darken($green, 25%);
+  }
+
   @media (min-width: $tablet-width) {
-    min-height: 0;
+    padding-bottom: 0;
 
     background: transparent;
   }
@@ -29,18 +37,22 @@
 .promo__inner {
   @media (min-width: $tablet-width) {
     position: relative;
-    width: 588px;
+    width: 535px;
+
+    &--button {
+      width: 543px;
+    }
   }
 
   @media (min-width: $desktop-width) {
     width: 1160px;
-    margin-left: 190px;
+    margin-left: 149px;
   }
 }
 
 .promo__title {
   margin: 0;
-  padding: 27px 0;
+  padding: 26px 0;
 
   font-weight: 400;
   font-size: 36px;
@@ -48,11 +60,17 @@
 
   @media (min-width: $tablet-width) {
     width: 420px;
+    padding-top: 12px;
+    padding-bottom: 42px;
 
     font-size: 60px;
     line-height: 60px;
     color: $black;
     text-align: left;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-top: 22px;
   }
 }
 
@@ -63,46 +81,37 @@
   text-transform: uppercase;
 
   @media (min-width: $tablet-width) {
-    padding: 0 0 50px;
+    padding: 0 0 48px;
 
     font-size: 20px;
     line-height: 20px;
     color: $black;
     text-align: left;
   }
-}
 
-.promo__img {
-  margin-top: -140px;
-
-  @media (min-width: $tablet-width or $desktop-width) {
-    display: none;
+  @media (min-width: $desktop-width) {
+    width: 450px;
+    padding-bottom: 50px;
   }
 }
 
-.promo__img-tablet {
-  display: none;
+.promo__img {
+  margin-top: -136px;
 
   @media (min-width: $tablet-width) {
     position: absolute;
     top: -30px;
-    right: 30px;
+    right: -63px;
     z-index: -1;
-    display: block;
+
+    margin-top: 0;
+    max-width: none;
   }
 
   @media (min-width: $desktop-width) {
-    display: none;
-  }
-}
+    top: -313px;
+    right: 260px;
 
-.promo__img-desktop {
-  display: none;
-
-  @media (min-width: $desktop-width) {
-    display: block;
-    position: absolute;
-    top: -300px;
-    right: 300px;
+    z-index: 1;
   }
 }
