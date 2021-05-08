@@ -69,7 +69,7 @@
   position: relative;
 
   padding: 0;
-  margin: 0 0 10px;
+  margin: 0 0 8px;
 
   border: 0;
 
@@ -170,6 +170,7 @@
 .form__wrap-checkbox {
   padding-left: 46px;
   margin-top: 10px;
+  margin-bottom: 8px;
 
   @media (min-width: $tablet-width) {
     width: 530px;
@@ -239,11 +240,11 @@
     &::before {
       content: "";
       position: absolute;
-      left: -45px;
-      top: -6px;
+      left: -46px;
+      top: -5px;
 
-      width: 30px;
-      height: 30px;
+      width: 28px;
+      height: 28px;
 
       border: 1px solid $medium-grey;
 
@@ -381,8 +382,8 @@
   &:checked + .form__label--checkbox::after {
     content: "";
     position: absolute;
-    top: 3px;
-    left: -38px;
+    top: 4px;
+    left: -40px;
 
     width: 18px;
     height: 14px;
@@ -421,12 +422,13 @@
   background-color: $white;
 
   &--comment {
-    width: 140px;
+    width: 143px;
+    padding-bottom: 39px;
   }
 
   &--additionaly {
-    width: 160px;
-    padding: 0 0 25px;
+    width: 164px;
+    padding: 0 0 27px;
   }
 
   @media (min-width: $tablet-width) {
@@ -447,7 +449,7 @@
 }
 
 .form__inner-bottom {
-  margin-bottom: 22px;
+  margin-bottom: 32px;
 
   @media (min-width: $tablet-width) {
     width: 530px;
@@ -466,6 +468,8 @@
 }
 
 .form__text {
+  margin-top: 20px;
+
   font-family: "Arial", sans-serif;
   line-height: 16px;
   text-align: center;
