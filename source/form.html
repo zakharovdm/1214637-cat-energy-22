@@ -19,7 +19,7 @@
               <picture>
                 <source media="(min-width: 1440px)" srcset="img/logo-desktop.svg">
                 <source media="(min-width: 768px)" srcset="img/logo-tablet.svg">
-                <img src="img/logo-mobile.svg" width="34" height="38" alt="">
+                <img class="site-nav__logo-img" src="img/logo-mobile.svg" width="34" height="38" alt="">
               </picture>
               <img class="site-nav__logo-text" src="img/logo-mobile-text.svg" width="101" height="18" alt="Кэт энерджи">
             </a>
@@ -88,9 +88,9 @@
           <div class="container container--form">
             <legend class="form__title">Контактные данные (владельца кота)</legend>
             <div class="form__wrap-contacts">
-              <div class="form__inner">
-                <label class="form__label form__label--contacts" for="email-field">E-mail:*</label>
-                <input class="form__input" type="email" name="email" id="email-field" placeholder="kuklachev@gmail.com">
+              <div class="form__inner form__inner--contacts">
+                <label class="form__label form__label--contacts form__label--email" for="email-field">E-mail:*</label>
+                <input class="form__input form__input--email" type="email" name="email" id="email-field" placeholder="kuklachev@gmail.com">
                 <svg class="form__input-logo" width="20" height="14" viewBox="0 0 20 14" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <line x1="0.65" y1="5.84766" x2="0.65" y2="13.8477" stroke="#222222" stroke-width="1.3"/>
                   <line x1="17.65" y1="5.84766" x2="17.65" y2="13.8477" stroke="#222222" stroke-width="1.3"/>
@@ -99,7 +99,7 @@
                   <path d="M17.35 3.02975L9.00002 9.5242L0.65 3.02975V1.49766H3.5L9.00002 1.49766H14H17.35V3.02975Z" stroke="#222222" stroke-width="1.3"/>
                 </svg>
               </div>
-              <div class="form__inner">
+              <div class="form__inner form__inner--contacts">
                 <label class="form__label form__label--contacts" for="phone-field">Телефон:*</label>
                 <input class="form__input" type="tel" name="phone" id="phone-field" placeholder="8 (960) 900-60-90">
                 <svg class="form__input-logo" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -125,13 +125,13 @@
           </div>
         </fieldset>
 
-        <fieldset class="form__fieldset">
+        <fieldset class="form__fieldset form__fieldset--additionaly">
           <div class="container container--form">
             <legend class="form__title form__title--additionaly">Дополнительно</legend>
             <div class="form__wrap-checkbox">
               <div class="form__inner">
                 <input class="form__checkbox visually-hidden" type="checkbox" name="sweetener" id="sweetener" checked>
-                <label class="form__label form__label--checkbox" for="sweetener">сахарозаменитель</label>
+                <label class="form__label form__label--checkbox form__label--left" for="sweetener">сахарозаменитель</label>
               </div>
               <div class="form__inner form__inner--right">
                 <input class="form__checkbox visually-hidden" type="checkbox" name="water" id="water">
@@ -139,7 +139,7 @@
               </div>
               <div class="form__inner">
                 <input class="form__checkbox visually-hidden" type="checkbox" name="milk" id="milk">
-                <label class="form__label form__label--checkbox" for="milk">молоко</label>
+                <label class="form__label form__label--checkbox form__label--left form__label--left-desktop" for="milk">молоко</label>
               </div>
               <div class="form__inner form__inner--center">
                 <input class="form__checkbox visually-hidden" type="checkbox" name="vitamins" id="vitamins">

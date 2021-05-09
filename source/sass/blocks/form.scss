@@ -8,7 +8,7 @@
 
 .form__wrapping {
   @media (min-width: $desktop-width) {
-    width: 1225px;
+    width: 1220px;
     padding: 0 20px;
     margin: 0 auto;
   }
@@ -38,11 +38,11 @@
     margin-bottom: 9px;
 
     @media (min-width: $tablet-width) {
-      margin-bottom: 44px;
+      margin-bottom: 23px;
     }
 
     @media (min-width: $desktop-width) {
-      margin-bottom: 69px;
+      margin-bottom: 50px;
     }
   }
 
@@ -55,11 +55,14 @@
     border-bottom: 1px solid $less-grey;
 
     @media (min-width: $tablet-width) {
+      margin-bottom: 75px;
+
       border: none;
     }
 
     @media (min-width: $desktop-width) {
       align-self: start;
+      margin-bottom: 50px;
       padding: 0;
     }
   }
@@ -72,10 +75,6 @@
   margin: 0 0 8px;
 
   border: 0;
-
-  &--additionally {
-    margin: 0 0 34px;
-  }
 
   .container {
     position: relative;
@@ -96,12 +95,16 @@
   }
 
   @media (min-width: $tablet-width) {
-    margin-bottom: 35px;
+    margin-bottom: 44px;
+
+    &--additionaly {
+      margin-bottom: 26px;
+    }
 
     .container::before {
       content: "";
       position: absolute;
-      top: 20px;
+      top: 22px;
       width: 100vw;
       right: 690px;
       height: 2px;
@@ -109,11 +112,17 @@
     }
 
     .container::after {
-      top: 20px;
+      top: 22px;
     }
   }
 
   @media (min-width: $desktop-width) {
+    margin-bottom: 46px;
+
+    &--additionaly {
+      margin-bottom: 33px;
+    }
+
     .container::before {
       right: 1280px;
     }
@@ -124,7 +133,7 @@
   padding-left: 45px;
 
   @media (min-width: $tablet-width) {
-    padding: 30px 10px 5px 88px;
+    padding: 30px 10px 2px 88px;
 
     border: 1px solid $lighted-grey;
   }
@@ -139,11 +148,16 @@
   @media (min-width: $tablet-width) {
     &--right {
       justify-self: end;
+      margin-right: 25px;
     }
 
     &--center {
       justify-self: end;
-      margin-right: 40px;
+      margin-right: 64px;
+    }
+
+    &--contacts {
+      width: 634px;
     }
   }
 
@@ -155,6 +169,10 @@
     &--center {
       justify-self: auto;
       margin-right: 0;
+    }
+
+    &--contacts {
+      width: auto;
     }
   }
 }
@@ -176,15 +194,13 @@
     width: 530px;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-gap: 10px;
+    grid-gap: 17px;
   }
 
   @media (min-width: $desktop-width) {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-  }
-
-  @media (min-width: $desktop-width) {
+    grid-gap: 143px;
     width: auto;
   }
 }
@@ -202,6 +218,8 @@
   user-select: none;
 
   @media (min-width: $tablet-width) {
+    padding-right: 19px;
+
     font-size: 20px;
     line-height: 30px;
   }
@@ -251,14 +269,44 @@
       @media (min-width: $tablet-width) {
         left: -60px;
 
-        width: 40px;
-        height: 40px;
+        width: 38px;
+        height: 38px;
       }
     }
   }
 
   &--contacts {
     padding-right: 10px;
+
+    @media (min-width: $tablet-width) {
+      padding-right: 15px;
+    }
+  }
+
+  &--email {
+    @media (min-width: $tablet-width) {
+      padding-right: 21px;
+    }
+  }
+
+  &--left {
+    @media (min-width: $tablet-width) {
+      padding-left: 13px;
+
+      &::before {
+        left: -45px;
+      }
+    }
+  }
+
+  &--left-desktop {
+    @media (min-width: $desktop-width) {
+      padding-left: 0;
+
+      &::before {
+        left: -58px;
+      }
+    }
   }
 }
 
@@ -273,11 +321,15 @@
   border: 1px solid $lighted-grey;
 
   @media (min-width: $tablet-width) {
-    padding: 10px 15px 10px;
+    padding: 10px 35px 10px 19px;
     margin: 0 0 20px;
 
     font-size: 20px;
     line-height: 30px;
+
+    &--email {
+      padding-left: 20px;
+    }
   }
 
   &::placeholder {
@@ -314,6 +366,7 @@
     @media (min-width: $tablet-width) {
       width: 600px;
       padding-left: 19px;
+      padding-bottom: 37px;
     }
 
     @media (min-width: $desktop-width) {
@@ -342,6 +395,7 @@
 
   @media (min-width: $tablet-width) {
     top: 17px;
+    right: 18px;
   }
 }
 
@@ -396,6 +450,18 @@
     }
   }
 
+  &:checked + .form__label--left::after {
+    @media (min-width: $tablet-width) {
+      left: -34px;
+    }
+  }
+
+  &:checked + .form__label--left-desktop::after {
+    @media (min-width: $desktop-width) {
+      left: -47px;
+    }
+  }
+
   &:hover:not(:disabled) + .form__label--checkbox::before,
   &:focus:not(:disabled) + .form__label--checkbox::before,
   &:checked:hover:not(:disabled) + .form__label--checkbox::before,
@@ -443,7 +509,8 @@
     }
 
     &--additionaly {
-      width: 250px;
+      width: 253px;
+      padding-bottom: 51px;
     }
   }
 }
@@ -452,8 +519,9 @@
   margin-bottom: 32px;
 
   @media (min-width: $tablet-width) {
-    width: 530px;
+    width: 522px;
     margin-bottom: 72px;
+    margin-left: 2px;
     display: flex;
     justify-content: space-between;
   }
@@ -461,7 +529,6 @@
   @media (min-width: $desktop-width) {
     display: grid;
     grid-template-columns: 1fr max-content;
-    grid-template-rows: 52px;
     grid-gap: 80px;
     margin-bottom: 82px;
   }
@@ -475,6 +542,8 @@
   text-align: center;
 
   @media (min-width: $tablet-width) {
+    margin-top: 17px;
+
     font-size: 16px;
   }
 }
