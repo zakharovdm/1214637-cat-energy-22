@@ -320,6 +320,10 @@
 
   border: 1px solid $lighted-grey;
 
+  &--contacts {
+    padding-right: 45px;
+  }
+
   @media (min-width: $tablet-width) {
     padding: 10px 35px 10px 19px;
     margin: 0 0 20px;
@@ -357,20 +361,17 @@
   }
 
   &--comment {
-    width: 255px;
-    min-height: 125px;
+    width: 100%;
+    min-height: 150px;
     padding: 10px 10px 13px 13px;
 
     resize: none;
+    box-sizing: border-box;
 
     @media (min-width: $tablet-width) {
-      width: 600px;
+      min-height: 174px;
       padding-left: 19px;
       padding-bottom: 37px;
-    }
-
-    @media (min-width: $desktop-width) {
-      width: 1190px;
     }
   }
 
@@ -396,6 +397,10 @@
   @media (min-width: $tablet-width) {
     top: 17px;
     right: 18px;
+  }
+
+  @media (min-width: $desktop-width) {
+    right: 16px;
   }
 }
 
