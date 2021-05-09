@@ -101,6 +101,16 @@
   }
 }
 
+.site-nav__logo-img {
+  @media (min-width: $tablet-width) {
+    width: 174px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 202px;
+  }
+}
+
 .site-nav__logo-text {
   @media (min-width: $tablet-width) {
     display: none;
