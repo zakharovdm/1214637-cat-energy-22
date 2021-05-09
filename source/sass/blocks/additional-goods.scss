@@ -13,7 +13,7 @@
     background-color: $green;
 
     @media (min-width: $tablet-width) {
-      top: 20px;
+      top: 22px;
       left: 65px;
     }
   }
@@ -22,14 +22,14 @@
     .container::before {
       content: "";
       position: absolute;
-      top: 20px;
+      top: 22px;
       width: 100vw;
-      right: 740px;
+      right: 729px;
       height: 2px;
       background-color: $green;
 
       @media (min-width: $desktop-width) {
-        right: 1280px;
+        right: 1283px;
       }
     }
   }
@@ -39,8 +39,8 @@
   position: relative;
   z-index: 1;
 
-  width: 250px;
-  margin: 0 0 36px 0;
+  width: 247px;
+  margin: 0 0 34px 0;
 
   font-weight: 400;
   font-size: 24px;
@@ -49,8 +49,9 @@
   background-color: $white;
 
   @media (min-width: $tablet-width) {
-    width: 370px;
-    margin-left: 35px;
+    width: 374px;
+    margin-left: 38px;
+    margin-bottom: 80px;
 
     font-size: 36px;
     line-height: 36px;
@@ -68,7 +69,7 @@
   @media (min-width: $tablet-width) {
     display: grid;
     grid-template-columns: 708px;
-    grid-gap: 28px;
+    grid-gap: 25px;
     width: 706px;
     padding-bottom: 28px;
     margin-bottom: 69px;
@@ -77,11 +78,12 @@
   }
 
   @media (min-width: $desktop-width) {
-    grid-template-columns: 895px;
+    grid-template-columns: 899px;
     justify-content: start;
     grid-gap: 0;
     width: 100%;
     margin-bottom: 58px;
+    padding-bottom: 30px;
 
     border: none;
   }
