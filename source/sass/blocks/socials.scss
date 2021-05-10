@@ -41,31 +41,38 @@
   }
 }
 
+.socials__link svg {
+  fill: $dark-grey-svg;
+
+  @media (min-width: $tablet-width) {
+    width: 35px;
+    height: 30px;
+  }
+}
+
+.socials__link--fb svg {
+  fill: none;
+  stroke: $dark-grey-svg;
+}
+
 .socials__link {
-  &:hover path,
-  &:focus path {
+  &:hover svg,
+  &:focus svg {
     fill: $green;
   }
 
-  &:active path {
+  &:active svg {
     fill: rgba($green, 0.3);
   }
 
-  &--fb:hover path,
-  &--fb:focus path {
+  &--fb:hover svg,
+  &--fb:focus svg {
     fill: none;
     stroke: $green;
   }
 
-  &--fb:active path {
+  &--fb:active svg {
     fill: none;
     stroke: rgba($green, 0.5);
-  }
-}
-
-.socials__link svg {
-  @media (min-width: $tablet-width) {
-    width: 35px;
-    height: 30px;
   }
 }
