@@ -3,6 +3,10 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Кэт энерджи</title>
+    <link rel="icon" href="favicon.ico">
+    <link rel="icon" href="img/favicons/favicon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="img/favicons/180.png">
+    <link rel="manifest" href="manifest.webmanifest">
     <link rel="stylesheet" href="css/style.css">
     <meta name="viewport" content="width=device-width, initial-scale=1">
   </head>
@@ -10,10 +14,14 @@
     <header class="site-header site-header--internal">
       <nav class="site-header__nav site-nav site-nav--closed site-nav--nojs">
         <div class="site-nav__wrap">
-          <div class="site-nav__inner container">
+          <div class="site-nav__inner site-nav__inner--internal container">
             <a class="site-nav__logo" href="index.html">
-              <img src="img/logo-mobile.svg" width="34" height="38" alt="">
-              <img src="img/logo-mobile-text.svg" width="101" height="18" alt="Кэт энерджи">
+              <picture>
+                <source media="(min-width: 1440px)" srcset="img/logo-desktop.svg">
+                <source media="(min-width: 768px)" srcset="img/logo-tablet.svg">
+                <img class="site-nav__logo-img" src="img/logo-mobile.svg" width="34" height="38" alt="">
+              </picture>
+              <img class="site-nav__logo-text" src="img/logo-mobile-text.svg" width="101" height="18" alt="Кэт энерджи">
             </a>
             <button class="site-nav__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
           </div>
@@ -43,11 +51,11 @@
             <div class="form__container">
               <div class="form__inner">
                 <label class="form__label" for="name-field">ИМЯ:*</label>
-                <input class="form__input" type="text" name="name" id="name-field" placeholder="барсик">
+                <input class="form__input" type="text" name="name" id="name-field" placeholder="барсик" required>
               </div>
               <div class="form__inner">
                 <label class="form__label" for="weight-field">Вес (кг):*</label>
-                <input class="form__input" type="number" name="weight" id="weight-field" placeholder="7">
+                <input class="form__input" type="number" name="weight" id="weight-field" placeholder="7" required>
               </div>
               <div class="form__inner">
                 <label class="form__label" for="age-field">Возраст (лет):</label>
@@ -80,9 +88,9 @@
           <div class="container container--form">
             <legend class="form__title">Контактные данные (владельца кота)</legend>
             <div class="form__wrap-contacts">
-              <div class="form__inner">
-                <label class="form__label" for="email-field">E-mail:*</label>
-                <input class="form__input" type="email" name="email" id="email-field" placeholder="kuklachev@gmail.com">
+              <div class="form__inner form__inner--contacts">
+                <label class="form__label form__label--contacts form__label--email" for="email-field">E-mail:*</label>
+                <input class="form__input form__input--email form__input--contacts" type="email" name="email" id="email-field" placeholder="kuklachev@gmail.com" required>
                 <svg class="form__input-logo" width="20" height="14" viewBox="0 0 20 14" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <line x1="0.65" y1="5.84766" x2="0.65" y2="13.8477" stroke="#222222" stroke-width="1.3"/>
                   <line x1="17.65" y1="5.84766" x2="17.65" y2="13.8477" stroke="#222222" stroke-width="1.3"/>
@@ -91,9 +99,9 @@
                   <path d="M17.35 3.02975L9.00002 9.5242L0.65 3.02975V1.49766H3.5L9.00002 1.49766H14H17.35V3.02975Z" stroke="#222222" stroke-width="1.3"/>
                 </svg>
               </div>
-              <div class="form__inner">
-                <label class="form__label" for="phone-field">Телефон:*</label>
-                <input class="form__input" type="tel" name="phone" id="phone-field" placeholder="8 (960) 900-60-90">
+              <div class="form__inner form__inner--contacts">
+                <label class="form__label form__label--contacts" for="phone-field">Телефон:*</label>
+                <input class="form__input form__input--contacts" type="tel" name="phone" id="phone-field" placeholder="8 (960) 900-60-90" required>
                 <svg class="form__input-logo" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <g clip-path="url(#clip0)">
                   <path d="M17.9 9.75275H9.39999V10.9569H17.9L15.8 13.0641L16.7 13.9672L19.8 10.8565C19.8974 10.7263 19.95 10.5678 19.95 10.405C19.95 10.2421 19.8974 10.0837 19.8 9.95344L16.7 6.84277L15.8 7.74587L17.9 9.75275Z" fill="black"/>
@@ -117,13 +125,13 @@
           </div>
         </fieldset>
 
-        <fieldset class="form__fieldset">
+        <fieldset class="form__fieldset form__fieldset--additionaly">
           <div class="container container--form">
             <legend class="form__title form__title--additionaly">Дополнительно</legend>
             <div class="form__wrap-checkbox">
               <div class="form__inner">
                 <input class="form__checkbox visually-hidden" type="checkbox" name="sweetener" id="sweetener" checked>
-                <label class="form__label form__label--checkbox" for="sweetener">сахарозаменитель</label>
+                <label class="form__label form__label--checkbox form__label--left" for="sweetener">сахарозаменитель</label>
               </div>
               <div class="form__inner form__inner--right">
                 <input class="form__checkbox visually-hidden" type="checkbox" name="water" id="water">
@@ -131,7 +139,7 @@
               </div>
               <div class="form__inner">
                 <input class="form__checkbox visually-hidden" type="checkbox" name="milk" id="milk">
-                <label class="form__label form__label--checkbox" for="milk">молоко</label>
+                <label class="form__label form__label--checkbox form__label--left form__label--left-desktop" for="milk">молоко</label>
               </div>
               <div class="form__inner form__inner--center">
                 <input class="form__checkbox visually-hidden" type="checkbox" name="vitamins" id="vitamins">
@@ -162,6 +170,11 @@
 
         <div class="site-footer__map">
           <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6036253002806!2d30.320858715677204!3d59.93871916905467!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1616780066902!5m2!1sru!2sru" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+          <picture>
+            <source media="(min-width: 1440px)" srcset="img/map-desktop.png 1x, img/map-desktop@2x.png 2x" width="1440" height="400">
+            <source media="(min-width: 768px)" srcset="img/map-tablet.png 1x, img/map-tablet@2x.png 2x" width="768" height="400">
+            <img class="site-footer__map-img" src="img/map-mobile.png" srcset="img/map-mobile@2x.png 2x" width="320" height="362" alt="Санкт-Петербург, ул. Большая Конюшенная, д. 19/8">
+          </picture>
         </div>
       </div>
 
