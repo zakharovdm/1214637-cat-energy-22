@@ -104,6 +104,8 @@
     right: -63px;
     z-index: -1;
 
+    width: 709px;
+
     margin-top: 0;
     max-width: none;
   }
@@ -111,6 +113,8 @@
   @media (min-width: $desktop-width) {
     top: -313px;
     right: 260px;
+
+    width: 552px;
 
     z-index: 1;
   }
