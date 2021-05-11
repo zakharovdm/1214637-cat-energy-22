@@ -3,12 +3,16 @@
   justify-content: space-between;
   align-items: center;
 
-  &:hover path,
-  &:focus path {
+  & svg {
+    fill: $dark-grey-svg;
+  }
+
+  &:hover svg,
+  &:focus svg {
     fill: $green;
   }
 
-  &:active path {
+  &:active svg {
     fill: rgba($green, 0.3);
   }
 

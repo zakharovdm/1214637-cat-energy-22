@@ -2,7 +2,7 @@
   display: grid;
   grid-template-columns: 140px 142px;
   justify-content: center;
-  padding-top: 19px;
+  padding-top: 21px;
 
   border-top: 1px solid $very-light-grey;
 
@@ -13,12 +13,13 @@
   }
 
   @media (min-width: $tablet-width) {
-    padding-bottom: 40px;
+    padding-bottom: 39px;
     grid-template-columns: 250px;
+    grid-template-rows: 140px 1fr min-content;
     background-color: $grey;
 
     &--show {
-      grid-template-rows: 110px 1fr 40px;
+      grid-template-rows: 139px 1fr 40px;
 
       background-color: $white;
       border: 2px solid $grey;
@@ -26,7 +27,12 @@
   }
 
   @media (min-width: $desktop-width) {
-    grid-template-columns: 180px;
+    grid-template-columns: 168px;
+    grid-template-rows: 142px 1fr min-content;
+
+    &--show {
+      grid-template-rows: 139px 1fr 40px;
+    }
   }
 }
 
@@ -46,11 +52,33 @@
 .product__link-img {
   justify-self: center;
   align-self: center;
+
+  transform: translateY(-4px);
+
+  &--alter {
+    transform: translateY(5px);
+  }
+
+  @media (min-width: $tablet-width) {
+    transform: translateY(-70px);
+
+    &--small {
+      transform: translateY(-50px);
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    transform: translateY(-76px);
+
+    &--small {
+      transform: translateY(-57px);
+    }
+  }
 }
 
 .product__title {
   width: 80px;
-  padding-bottom: 18px;
+  padding-bottom: 14px;
   margin: 0;
 
   font-weight: 400;
@@ -61,19 +89,26 @@
 
   @media (min-width: $tablet-width) {
     width: 130px;
-    padding-bottom: 21px;
+    padding-bottom: 19px;
     margin: 0 auto;
 
     font-size: 20px;
     line-height: 24px;
     text-align: center;
   }
+
+  @media (min-width: $desktop-width) {
+    padding-bottom: 25px;
+    padding-left: 5px;
+
+    line-height: 21px;
+  }
 }
 
 .product__show {
   position: relative;
 
-  margin: 55px 0 10px 0;
+  margin: 58px 0 9px 0;
 
   font-size: 16px;
   line-height: 20px;
@@ -84,7 +119,7 @@
   &::before {
     content: "";
     position: absolute;
-    top: -50px;
+    top: -53px;
     left: 125px;
 
     width: 30px;
@@ -102,7 +137,7 @@
     line-height: 22px;
 
     &::before {
-      top: -90px;
+      top: -110px;
       left: 40px;
 
       width: 60px;
@@ -129,4 +164,9 @@
     font-size: 16px;
     line-height: 18px;
   }
+}
+
+.product__link-img img {
+  width: 100%;
+  height: 100%;
 }

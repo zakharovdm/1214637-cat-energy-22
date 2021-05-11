@@ -310,6 +310,27 @@
   }
 }
 
+.form__input-logo {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+
+  fill: none;
+
+  &--email {
+    stroke: $darked-grey;
+  }
+
+  @media (min-width: $tablet-width) {
+    top: 17px;
+    right: 18px;
+  }
+
+  @media (min-width: $desktop-width) {
+    right: 16px;
+  }
+}
+
 .form__input {
   padding: 13px 15px 12px;
   margin: 0 0 14px;
@@ -355,8 +376,7 @@
     border-color: $dark-grey;
   }
 
-  &:focus + .form__input-logo path,
-  &:focus + .form__input-logo line {
+  &:focus + .form__input-logo {
     stroke: $green;
   }
 
@@ -378,29 +398,13 @@
   &--error {
     border-color: $red;
 
-    & + .form__input-logo path,
-    & + .form__input-logo line {
+    & + .form__input-logo {
       stroke: $red;
     }
   }
 
   &[type="number"] {
     appearance: textfield;
-  }
-}
-
-.form__input-logo {
-  position: absolute;
-  top: 14px;
-  right: 14px;
-
-  @media (min-width: $tablet-width) {
-    top: 17px;
-    right: 18px;
-  }
-
-  @media (min-width: $desktop-width) {
-    right: 16px;
   }
 }
 

@@ -10,11 +10,23 @@
   font-size: 36px;
   line-height: 36px;
 
+  &--catalog {
+    padding-bottom: 38px;
+  }
+
   @media (min-width: $tablet-width) {
-    padding: 0 0 54px;
+    &--catalog {
+      padding: 0 0 165px;
+    }
 
     font-size: 60px;
     line-height: 60px;
+  }
+
+  @media (min-width: $desktop-width) {
+    &--catalog {
+      padding-bottom: 120px;
+    }
   }
 }
 

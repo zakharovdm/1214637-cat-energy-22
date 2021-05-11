@@ -3,36 +3,57 @@
   flex-direction: column;
   justify-content: flex-end;
   width: 280px;
-  min-height: 289px;
+  padding-top: 186px;
   margin: 0 0 35px;
 
   background: url("../img/gift-mobile.jpg") no-repeat;
   background-color: $dark-green;
 
+  @media (min-resolution: 2dppx) {
+    background: url("../img/gift-mobile@2x.jpg") no-repeat;
+    background-size: 280px auto;
+    background-color: $dark-green;
+  }
+
   @media (min-width: $tablet-width) {
     width: 708px;
-    min-height: 200px;
+    padding-top: 71px;
+    padding-bottom: 69px;
     margin: 0 0 76px;
     justify-content: center;
     align-items: flex-end;
+
     background: url("../img/gift-tablet.jpg") no-repeat;
+
+    @media (min-resolution: 2dppx) {
+      background: url("../img/gift-tablet@2x.jpg") no-repeat;
+      background-color: $dark-green;
+      background-size: 708px auto;
+    }
   }
 
   @media (min-width: $desktop-width) {
     width: 245px;
-    height: 289px;
+    padding-top: 185px;
+    padding-bottom: 0;
     margin: 0 0 86px;
     justify-content: flex-end;
     background: url("../img/gift-desktop.jpg") no-repeat;
+
+    @media (min-resolution: 2dppx) {
+      background: url("../img/gift-desktop@2x.jpg") no-repeat;
+      background-color: $dark-green;
+      background-size: 245px auto;
+    }
   }
 }
 
 .offer__text {
   position: relative;
 
-  width: 150px;
+  width: 161px;
   margin: 0 auto;
-  padding-bottom: 45px;
+  padding-bottom: 42px;
 
   font-family: "Arial", sans-serif;
   font-size: 16px;
@@ -43,8 +64,8 @@
   &--gift::after {
     content: "";
     position: absolute;
-    top: -125px;
-    left: 35px;
+    top: -130px;
+    left: 40px;
 
     width: 80px;
     height: 80px;
@@ -60,8 +81,8 @@
     text-align: left;
 
     &--gift::after {
-      top: -10px;
-      left: -345px;
+      top: -13px;
+      left: -343px;
     }
   }
 
@@ -72,8 +93,8 @@
     text-align: center;
 
     &--gift::after {
-      top: -125px;
-      left: 50px;
+      top: -129px;
+      left: 55px;
     }
   }
 }
