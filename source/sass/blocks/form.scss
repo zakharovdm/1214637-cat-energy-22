@@ -310,6 +310,14 @@
   }
 }
 
+.form__input-logo {
+  fill: none;
+
+  &--email {
+    stroke: $darked-grey;
+  }
+}
+
 .form__input {
   padding: 13px 15px 12px;
   margin: 0 0 14px;
@@ -355,8 +363,7 @@
     border-color: $dark-grey;
   }
 
-  &:focus + .form__input-logo path,
-  &:focus + .form__input-logo line {
+  &:focus + .form__input-logo {
     stroke: $green;
   }
 
