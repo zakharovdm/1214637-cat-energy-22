@@ -398,8 +398,7 @@
   &--error {
     border-color: $red;
 
-    & + .form__input-logo path,
-    & + .form__input-logo line {
+    & + .form__input-logo {
       stroke: $red;
     }
   }
