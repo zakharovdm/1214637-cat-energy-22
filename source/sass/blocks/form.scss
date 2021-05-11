@@ -311,10 +311,23 @@
 }
 
 .form__input-logo {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+
   fill: none;
 
   &--email {
     stroke: $darked-grey;
+  }
+
+  @media (min-width: $tablet-width) {
+    top: 17px;
+    right: 18px;
+  }
+
+  @media (min-width: $desktop-width) {
+    right: 16px;
   }
 }
 
@@ -393,21 +406,6 @@
 
   &[type="number"] {
     appearance: textfield;
-  }
-}
-
-.form__input-logo {
-  position: absolute;
-  top: 14px;
-  right: 14px;
-
-  @media (min-width: $tablet-width) {
-    top: 17px;
-    right: 18px;
-  }
-
-  @media (min-width: $desktop-width) {
-    right: 16px;
   }
 }
 
