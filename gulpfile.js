@@ -11,6 +11,7 @@ const terser = require("gulp-terser");
 const rename = require("gulp-rename");
 const imagemin = require('gulp-imagemin');
 const webp = require("gulp-webp");
+const svgstore = require("gulp-svgstore");
 
 // Styles
 
@@ -84,6 +85,17 @@ const createWebP = () => {
 
 exports.createWebp = createWebp;
 
+// Sprite
+
+const sprite = () => {
+  return gulp.src("source/img/icons-sprite/*.svg")
+    .pipe(svgstore())
+    .pipe(rename("sprite.svg"))
+    .pipe(gulp.dest("build/img"))
+}
+
+exports.sprite = sprite;
+
 // Server
 
 const server = (done) => {
@@ -111,4 +123,4 @@ exports.default = gulp.series(
   styles, copyImages, server, watcher
 );
 
-exports.build = gulp.series(styles, html, scripts, optimizeImages, copyImages, createWebp);
+exports.build = gulp.series(styles, html, scripts, optimizeImages, copyImages, createWebp, sprite);
