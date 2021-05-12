@@ -9,6 +9,8 @@ const csso = require("postcss-csso");
 const htmlmin = require("gulp-htmlmin");
 const terser = require("gulp-terser");
 const rename = require("gulp-rename");
+const imagemin = require('gulp-imagemin');
+const webp = require("gulp-webp");
 
 // Styles
 
@@ -43,12 +45,44 @@ exports.html = html;
 
 const scripts = () => {
   return gulp.src("source/js/script.js")
-  .pipe(terser())
-  .pipe(rename("script.min.js"))
-  .pipe(gulp.dest("build/js"))
+    .pipe(terser())
+    .pipe(rename("script.min.js"))
+    .pipe(gulp.dest("build/js"))
 }
 
 exports.scripts = scripts;
+
+// Images
+
+const optimizeImages = () => {
+  return gulp.src("source/img/**/*.{jpg,png,svg}")
+    .pipe(imagemin([
+      imagemin.optipng({optimizationLevel: 3}),
+      imagemin.mozjpeg({progressive: true}),
+      imagemin.svgo()
+    ]))
+
+    .pipe(gulp.dest("build/img"))
+}
+
+exports.optimizeImages = optimizeImages;
+
+const copyImages = () => {
+  return gulp.src("source/img/**/*.{jpg,png,svg}")
+    .pipe(gulp.dest("build/img"))
+}
+
+exports.copyImages = copyImages;
+
+// WebP
+
+const createWebP = () => {
+  return gulp.src("source/img/**/*.{jpg,png}")
+    .pipe(webp({quality: 90}))
+    .pipe(gulp.dest("build/img"))
+}
+
+exports.createWebp = createWebp;
 
 // Server
 
@@ -74,7 +108,7 @@ const watcher = () => {
 }
 
 exports.default = gulp.series(
-  styles, server, watcher
+  styles, copyImages, server, watcher
 );
 
-exports.build = gulp.series(styles, html, scripts);
+exports.build = gulp.series(styles, html, scripts, optimizeImages, copyImages, createWebp);
