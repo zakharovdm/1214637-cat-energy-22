@@ -12,6 +12,7 @@ const rename = require("gulp-rename");
 const imagemin = require('gulp-imagemin');
 const webp = require("gulp-webp");
 const svgstore = require("gulp-svgstore");
+const del = require("del");
 
 // Styles
 
@@ -24,8 +25,8 @@ const styles = () => {
       autoprefixer(),
       csso()
     ]))
-    .pipe(sourcemap.write("."))
     .pipe(rename("style.min.css"))
+    .pipe(sourcemap.write("."))
     .pipe(gulp.dest("build/css"))
     .pipe(sync.stream());
 }
@@ -105,9 +106,10 @@ const copy = (done) => {
   gulp.src ([
     "source/fonts/*.{woff2, woff}",
     "source/*.ico"
-  ])
-  .pipe(gulp.dest("build"))
-
+  ], {
+    base: "source"
+  })
+    .pipe(gulp.dest("build"))
   done();
 }
 
@@ -147,7 +149,7 @@ const reload = (done) => {
 const watcher = () => {
   gulp.watch("source/sass/**/*.scss", gulp.series("styles"));
   gulp.watch("source/js/script.js", gulp.series("scripts"));
-  gulp.watch("source/*.html").on("change", sync.reload);
+  gulp.watch("source/*.html", gulp.series(html, reload));
 }
 
 // Build
@@ -185,4 +187,3 @@ exports.default = gulp.series(
     watcher
   )
 );
-
