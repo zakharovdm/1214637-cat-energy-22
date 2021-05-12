@@ -49,6 +49,7 @@ const scripts = () => {
     .pipe(terser())
     .pipe(rename("script.min.js"))
     .pipe(gulp.dest("build/js"))
+    .pipe(sync.stream());
 }
 
 exports.scripts = scripts;
@@ -89,19 +90,41 @@ exports.createWebp = createWebp;
 
 const sprite = () => {
   return gulp.src("source/img/icons-sprite/*.svg")
-    .pipe(svgstore())
+    .pipe(svgstore({
+      inlineSvg: true
+    }))
     .pipe(rename("sprite.svg"))
     .pipe(gulp.dest("build/img"))
 }
 
 exports.sprite = sprite;
 
+// Copy
+
+const copy = (done) => {
+  gulp.src ([
+    "source/fonts/*.{woff2, woff}",
+    "source/*.ico"
+  ])
+  .pipe(gulp.dest("build"))
+
+  done();
+}
+
+exports.copy = copy;
+
+// Clean
+
+const clean = () => {
+  return del("build");
+}
+
 // Server
 
 const server = (done) => {
   sync.init({
     server: {
-      baseDir: 'source'
+      baseDir: 'build'
     },
     cors: true,
     notify: false,
@@ -112,15 +135,38 @@ const server = (done) => {
 
 exports.server = server;
 
+// Reload
+
+const reload = (done) => {
+  sync.reload();
+  done();
+}
+
 // Watcher
 
 const watcher = () => {
   gulp.watch("source/sass/**/*.scss", gulp.series("styles"));
+  gulp.watch("source/js/script.js", gulp.series("scripts"));
   gulp.watch("source/*.html").on("change", sync.reload);
 }
+
+// Build
+
+const build = gulp.series(
+  clean,
+  copy,
+  optimizeImages,
+  gulp.parallel (
+    styles,
+    html,
+    scripts,
+    sprite,
+    createWebp
+  ),
+);
+
+exports.build = build;
 
 exports.default = gulp.series(
   styles, copyImages, server, watcher
 );
-
-exports.build = gulp.series(styles, html, scripts, optimizeImages, copyImages, createWebp, sprite);
