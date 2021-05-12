@@ -5,6 +5,10 @@ const sass = require("gulp-sass");
 const postcss = require("gulp-postcss");
 const autoprefixer = require("autoprefixer");
 const sync = require("browser-sync").create();
+const csso = require("postcss-csso");
+const htmlmin = require("gulp-htmlmin");
+const terser = require("gulp-terser");
+const rename = require("gulp-rename");
 
 // Styles
 
@@ -14,14 +18,37 @@ const styles = () => {
     .pipe(sourcemap.init())
     .pipe(sass())
     .pipe(postcss([
-      autoprefixer()
+      autoprefixer(),
+      csso()
     ]))
     .pipe(sourcemap.write("."))
-    .pipe(gulp.dest("source/css"))
+    .pipe(rename("style.min.css"))
+    .pipe(gulp.dest("build/css"))
     .pipe(sync.stream());
 }
 
 exports.styles = styles;
+
+// HTML
+
+const html = () => {
+  return gulp.src("source/*.html")
+    .pipe(htmlmin({ collapseWhitespace: true }))
+    .pipe(gulp.dest("build"));
+}
+
+exports.html = html;
+
+// Scripts
+
+const scripts = () => {
+  return gulp.src("source/js/script.js")
+  .pipe(terser())
+  .pipe(rename("script.min.js"))
+  .pipe(gulp.dest("build/js"))
+}
+
+exports.scripts = scripts;
 
 // Server
 
@@ -49,3 +76,5 @@ const watcher = () => {
 exports.default = gulp.series(
   styles, server, watcher
 );
+
+exports.build = gulp.series(styles, html, scripts);
