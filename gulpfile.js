@@ -25,8 +25,8 @@ const styles = () => {
       autoprefixer(),
       csso()
     ]))
-    .pipe(rename("style.min.css"))
     .pipe(sourcemap.write("."))
+    .pipe(rename("style.min.css"))
     .pipe(gulp.dest("build/css"))
     .pipe(sync.stream());
 }
@@ -104,8 +104,9 @@ exports.sprite = sprite;
 
 const copy = (done) => {
   gulp.src ([
-    "source/fonts/*.{woff2, woff}",
-    "source/*.ico"
+    "source/fonts/*.{woff2,woff}",
+    "source/*.ico",
+    "source/manifest.webmanifest"
   ], {
     base: "source"
   })
