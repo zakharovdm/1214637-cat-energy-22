@@ -85,7 +85,7 @@ const createWebP = () => {
     .pipe(gulp.dest("build/img"))
 }
 
-exports.createWebp = createWebp;
+exports.createWebP = createWebP;
 
 // Sprite
 
@@ -163,7 +163,7 @@ const build = gulp.series(
     html,
     scripts,
     sprite,
-    createWebp
+    createWebP
   ),
 );
 
@@ -180,7 +180,7 @@ exports.default = gulp.series(
     html,
     scripts,
     sprite,
-    createWebp
+    createWebP
   ),
   gulp.series (
     server,
