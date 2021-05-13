@@ -177,4 +177,12 @@
   top: 0;
   left: 0;
   right: 0;
+
+  @media (min-width: $tablet-width) {
+    width: 768px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 1440px;
+  }
 }
