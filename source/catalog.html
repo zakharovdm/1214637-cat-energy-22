@@ -3,11 +3,17 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Кэт энерджи</title>
+    <link rel="preload" href="css/style.min.css" as="style">
+    <link rel="preload" href="js/script.min.js" as="script">
+    <link rel="preload" href="fonts/oswaldmedium.woff2" type="font/woff2" as="font" crossorigin>
+    <link rel="preload" href="fonts/oswaldregular.woff2" type="font/woff2" as="font" crossorigin>
+    <link rel="preload" href="fonts/oswaldmedium.woff" type="font/woff" as="font" crossorigin>
+    <link rel="preload" href="fonts/oswaldregular.woff" type="font/woff" as="font" crossorigin>
     <link rel="icon" href="favicon.ico">
     <link rel="icon" href="img/favicons/favicon.svg" type="image/svg+xml">
     <link rel="apple-touch-icon" href="img/favicons/180.png">
     <link rel="manifest" href="manifest.webmanifest">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style.min.css">
     <meta name="viewport" content="width=device-width, initial-scale=1">
   </head>
   <body class="page-body">
@@ -50,6 +56,8 @@
           <li class="product">
             <a class="product__link-img product__link-img--small" href="blank.html">
               <picture>
+                <source type="image/webp" media="(min-width: 768px)" srcset="img/chicken-500-tablet.webp 1x, img/chicken-500-tablet@2x.webp 2x">
+                <source type="image/webp" srcset="img/chicken-500-mob.webp 1x, img/chicken-500-mob@2x.webp 2x">
                 <source media="(min-width: 768px)" srcset="img/chicken-500-tablet.png 1x, img/chicken-500-tablet@2x.png 2x">
                 <img src="img/chicken-500-mob.png" srcset="img/chicken-500-mob@2x.png 2x" alt="" width="85" height="105">
               </picture>
@@ -78,6 +86,8 @@
           <li class="product">
             <a class="product__link-img" href="blank.html">
               <picture>
+                <source type="image/webp" media="(min-width: 768px)" srcset="img/chicken-1000-tablet.webp 1x, img/chicken-1000-tablet@2x.webp 2x">
+                <source type="image/webp" srcset="img/chicken-1000-mob.webp 1x, img/chicken-1000-mob@2x.webp 2x">
                 <source media="(min-width: 768px)" srcset="img/chicken-1000-tablet.png 1x, img/chicken-1000-tablet@2x.png 2x">
                 <img src="img/chicken-1000-mob.png" srcset="img/chicken-1000-mob@2x.png 2x" alt="" width="85" height="105">
               </picture>
@@ -106,6 +116,8 @@
           <li class="product">
             <a class="product__link-img product__link-img--small product__link-img--alter" href="blank.html">
               <picture>
+                <source type="image/webp" media="(min-width: 768px)" srcset="img/fish-500-tablet.webp 1x, img/fish-500-tablet@2x.webp 2x">
+                <source type="image/webp" srcset="img/fish-500-mob.webp 1x, img/fish-500-mob@2x.webp 2x">
                 <source media="(min-width: 768px)" srcset="img/fish-500-tablet.png 1x, img/fish-500-tablet@2x.png 2x">
                 <img src="img/fish-500-mob.png" srcset="img/fish-500-mob@2x.png 2x" alt="" width="85" height="105">
               </picture>
@@ -134,6 +146,8 @@
           <li class="product">
             <a class="product__link-img" href="blank.html">
               <picture>
+                <source type="image/webp" media="(min-width: 768px)" srcset="img/fish-1000-tablet.webp 1x, img/fish-1000-tablet@2x.webp 2x">
+                <source type="image/webp" srcset="img/fish-1000-mob.webp 1x, img/fish-1000-mob@2x.webp 2x">
                 <source media="(min-width: 768px)" srcset="img/fish-1000-tablet.png 1x, img/fish-1000-tablet@2x.png 2x">
                 <img src="img/fish-1000-mob.png" srcset="img/fish-1000-mob@2x.png 2x" alt="" width="85" height="105">
               </picture>
@@ -162,6 +176,8 @@
           <li class="product">
             <a class="product__link-img product__link-img--small product__link-img--alter" href="blank.html">
               <picture>
+                <source type="image/webp" media="(min-width: 768px)" srcset="img/buckwheat-500-tablet.webp 1x, img/buckwheat-500-tablet@2x.webp 2x">
+                <source type="image/webp" srcset="img/buckwheat-500-mob.webp 1x, img/buckwheat-500-mob@2x.webp 2x">
                 <source media="(min-width: 768px)" srcset="img/buckwheat-500-tablet.png 1x, img/buckwheat-500-tablet@2x.png 2x">
                 <img src="img/buckwheat-500-mob.png" srcset="img/buckwheat-500-mob@2x.png 2x" alt="" width="85" height="105">
               </picture>
@@ -190,6 +206,8 @@
           <li class="product">
             <a class="product__link-img" href="blank.html">
               <picture>
+                <source type="image/webp" media="(min-width: 768px)" srcset="img/buckwheat-1000-tablet.webp 1x, img/buckwheat-1000-tablet@2x.webp 2x">
+                <source type="image/webp" srcset="img/buckwheat-1000-mob.webp 1x, img/buckwheat-1000-mob@2x.webp 2x">
                 <source media="(min-width: 768px)" srcset="img/buckwheat-1000-tablet.png 1x, img/buckwheat-1000-tablet@2x.png 2x">
                 <img src="img/buckwheat-1000-mob.png" srcset="img/buckwheat-1000-mob@2x.png 2x" alt="" width="85" height="105">
               </picture>
@@ -218,6 +236,8 @@
           <li class="product">
             <a class="product__link-img product__link-img--small product__link-img--alter" href="blank.html">
               <picture>
+                <source type="image/webp" media="(min-width: 768px)" srcset="img/rice-500-tablet.webp 1x, img/rice-500-tablet@2x.webp 2x">
+                <source type="image/webp" srcset="img/rice-500-mob.webp 1x, img/rice-500-mob@2x.webp 2x">
                 <source media="(min-width: 768px)" srcset="img/rice-500-tablet.png 1x, img/rice-500-tablet@2x.png 2x">
                 <img src="img/rice-500-mob.png" srcset="img/rice-500-mob@2x.png 2x" alt="" width="85" height="105">
               </picture>
@@ -322,8 +342,11 @@
         <div class="site-footer__map">
           <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6036253002806!2d30.320858715677204!3d59.93871916905467!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1616780066902!5m2!1sru!2sru" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
           <picture>
-            <source media="(min-width: 1440px)" srcset="img/map-desktop.png 1x, img/map-desktop@2x.png 2x" width="1440" height="400">
-            <source media="(min-width: 768px)" srcset="img/map-tablet.png 1x, img/map-tablet@2x.png 2x" width="768" height="400">
+            <source type="image/webp" media="(min-width: 1440px)" srcset="img/map-desktop.webp 1x, img/map-desktop@2x.webp 2x">
+            <source type="image/webp" media="(min-width: 768px)" srcset="img/map-tablet.webp 1x, img/map-tablet@2x.webp 2x">
+            <source type="image/webp" srcset="img/map-mobile.webp 1x, img/map-mobile@2x.webp 2x">
+            <source media="(min-width: 1440px)" srcset="img/map-desktop.png 1x, img/map-desktop@2x.png 2x">
+            <source media="(min-width: 768px)" srcset="img/map-tablet.png 1x, img/map-tablet@2x.png 2x">
             <img class="site-footer__map-img" src="img/map-mobile.png" srcset="img/map-mobile@2x.png 2x" width="320" height="362" alt="Санкт-Петербург, ул. Большая Конюшенная, д. 19/8">
           </picture>
         </div>
@@ -332,14 +355,16 @@
       <div class="container">
         <div class="site-footer__wrapper">
           <a class="site-footer__logo" href="index.html">
-            <img src="img/footer-logo.svg" alt="Кэт энерджи">
+            <svg width="128" height="24">
+              <use xlink:href="img/sprite.svg#footer-logo"></use>
+            </svg>
           </a>
 
           <ul class="site-footer__socials socials">
             <li class="socials__item">
               <a class="socials__link" href="https://vk.com/">
                 <svg width="25" height="20">
-                  <use xlink:href="img/sprite.svg#icon-vk"></use>
+                  <use xlink:href="img/sprite.svg#icon_vkontakte"></use>
                 </svg>
                 <span class="visually-hidden">Вконтакте</span>
               </a>
@@ -347,7 +372,7 @@
             <li class="socials__item">
               <a class="socials__link" href="https://www.instagram.com/">
                 <svg width="25" height="20">
-                  <use xlink:href="img/sprite.svg#icon-instagram"></use>
+                  <use xlink:href="img/sprite.svg#icon_instagram"></use>
                 </svg>
                 <span class="visually-hidden">Инстаграм</span>
               </a>
@@ -355,7 +380,7 @@
             <li class="socials__item">
               <a class="socials__link socials__link--fb" href="https://www.facebook.com/">
                 <svg width="25" height="20">
-                  <use xlink:href="img/sprite.svg#icon-facebook"></use>
+                  <use xlink:href="img/sprite.svg#icon_facebook"></use>
                 </svg>
                 <span class="visually-hidden">Фейсбук</span>
               </a>
@@ -366,13 +391,13 @@
             <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">
               <p class="copyright__text">HTML Academy</p>
               <svg width="27" height="34">
-                <use xlink:href="img/sprite.svg#icon-academy-logo"></use>
+                <use xlink:href="img/sprite.svg#html-academy-logo"></use>
               </svg>
             </a>
           </div>
         </div>
       </div>
     </footer>
-    <script src="js/script.js"></script>
+    <script src="js/script.min.js"></script>
   </body>
 </html>
