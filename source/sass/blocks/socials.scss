@@ -1,7 +1,7 @@
 .socials {
   @include reset-list;
   margin-bottom: 21px;
-  padding: 21px 0 18px;
+  padding: 20px 0 16px;
 
   display: flex;
   justify-content: center;
@@ -10,11 +10,20 @@
   border-top: 1px solid $less-grey;
   border-bottom: 1px solid $less-grey;
 
+  &--internal {
+    padding-bottom: 18px;
+  }
+
   @media (min-width: $tablet-width) {
     margin: 0;
     margin-left: 47px;
+    padding-top: 17px;
 
     border: none;
+
+    &--internal {
+      padding-top: 15px;
+    }
   }
 
   @media (min-width: $desktop-width) {

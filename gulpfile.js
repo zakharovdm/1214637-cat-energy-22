@@ -9,7 +9,7 @@ const csso = require("postcss-csso");
 const htmlmin = require("gulp-htmlmin");
 const terser = require("gulp-terser");
 const rename = require("gulp-rename");
-const imagemin = require('gulp-imagemin');
+const imagemin = require("gulp-imagemin");
 const webp = require("gulp-webp");
 const svgstore = require("gulp-svgstore");
 const del = require("del");
@@ -130,7 +130,7 @@ const clean = () => {
 const server = (done) => {
   sync.init({
     server: {
-      baseDir: 'build'
+      baseDir: "build"
     },
     cors: true,
     notify: false,
