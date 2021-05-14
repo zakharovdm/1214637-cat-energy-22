@@ -24,6 +24,7 @@
     align-items: flex-end;
 
     background: url("../img/gift-tablet.jpg") no-repeat;
+    background-color: $dark-green;
 
     @media (min-resolution: 2dppx) {
       background: url("../img/gift-tablet@2x.jpg") no-repeat;
@@ -39,6 +40,7 @@
     margin: 0 0 86px;
     justify-content: flex-end;
     background: url("../img/gift-desktop.jpg") no-repeat;
+    background-color: $dark-green;
 
     @media (min-resolution: 2dppx) {
       background: url("../img/gift-desktop@2x.jpg") no-repeat;
