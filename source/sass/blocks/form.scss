@@ -376,7 +376,7 @@
   }
 
   &:focus {
-    border-color: $dark-grey;
+    border: 2px solid $dark-grey;
   }
 
   &:focus + .form__input-logo {
