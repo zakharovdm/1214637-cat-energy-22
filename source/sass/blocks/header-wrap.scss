@@ -22,12 +22,12 @@
     min-height: 694px;
 
     background: url("../img/green-layer-desktop.png"), url("../img/background-promo-desktop.jpg") right no-repeat;
-    background-color: darken($green, 30%);
+    background-color: darken($green, 27%);
 
     @media (min-resolution: 2dppx) {
       background: url("../img/green-layer-desktop@2x.png"), url("../img/background-promo-desktop@2x.jpg") right no-repeat;
       background-size: 720px auto;
-      background-color: darken($green, 30%);
+      background-color: darken($green, 27%);
     }
   }
 }
