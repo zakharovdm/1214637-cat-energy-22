@@ -240,6 +240,15 @@
 
     &--desktop {
       color: $white;
+
+      &:hover,
+      &:focus {
+        color: rgba($white, 0.4);
+      }
+
+      &:active {
+        color: rgba($white, 0.1);
+      }
     }
   }
 }
