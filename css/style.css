@@ -451,7 +451,8 @@ img {
   width: 190px;
   margin: 11px 0 14px;
   display: flex;
-  justify-content: space-between; }
+  justify-content: space-between;
+  align-items: center; }
   .site-nav__logo:hover, .site-nav__logo:focus {
     opacity: 0.8; }
   .site-nav__logo:active {
